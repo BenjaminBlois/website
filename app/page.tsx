@@ -7,6 +7,7 @@ import Testimonials from './components/Testimonials';
 import IndustriesPreview from './components/IndustriesPreview';
 import HowWeWork from './components/HowWeWork';
 import Integrations from './components/Integrations';
+import BlogPosts from './components/BlogPosts';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 
@@ -22,6 +23,7 @@ export default function Home() {
       <IndustriesPreview />
       <HowWeWork />
       <Integrations />
+      <BlogPosts />
       <CTASection />
       <Footer />
     </main>

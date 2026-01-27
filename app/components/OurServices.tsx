@@ -7,7 +7,7 @@ export default function OurServices() {
   const services = [
     {
       title: 'Clean Up, Catch Up & Configure Your Books',
-      description: 'From transaction coding to designing revenue recognition systems, we know what it takes to deliver accurate data. With Numeriq Tax and Accounting you access:',
+      description: 'From transaction coding to designing revenue recognition systems, we know what it takes to deliver accurate data. With kept.pro you access:',
       features: [
         'Full stack teams: Controller, Senior Bookkeeper, and Bookkeeper(s)',
         'Comprehensive services (AR/AP, Month End, Payroll, Integrations, KPI\'s, Reporting, 1099 Filing, etc.)',

@@ -13,7 +13,7 @@ export default function HowWeWork() {
               How We Work
             </h2>
             <p className="text-lg md:text-xl mb-8 leading-relaxed">
-              Numeriq Tax and Accounting delivers complete outsourced accounting and bookkeeping teams, or we can augment your existing internal capacity. We work with you as an integrated partner, structurally invested in your success, and scalable as you grow.
+              kept.pro delivers, complete outsourced accounting and bookkeeping teams, or we can augment your existing internal capacity. We work with you as an integrated partner, structurally invested in your success, and scalable as you grow.
             </p>
             <Link
               href="/about#how-we-work"

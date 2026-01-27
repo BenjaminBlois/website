@@ -25,23 +25,35 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <Link href="/services" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base">
-              Services
-            </Link>
-            <Link href="/industries" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base">
-              Industries
-            </Link>
+            <div className="relative group">
+              <Link href="/services" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1">
+                Services
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+            </div>
+            <div className="relative group">
+              <Link href="/industries" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1">
+                Industries
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+            </div>
+            <div className="relative group">
+              <Link href="/about" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1">
+                About
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+            </div>
             <Link href="/pricing" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base">
               Pricing
             </Link>
-            <Link href="/about" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base">
-              About
-            </Link>
-            <Link
-              href="/signin"
-              className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base"
-            >
-              Sign In
+            <Link href="/blog" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base">
+              Blog
             </Link>
             <Link
               href="/contact"
@@ -87,8 +99,8 @@ export default function Navigation() {
             <Link href="/about" className="block text-gray-700 hover:text-[#50a744] font-semibold">
               About
             </Link>
-            <Link href="/signin" className="block text-gray-700 hover:text-[#50a744] font-semibold">
-              Sign In
+            <Link href="/blog" className="block text-gray-700 hover:text-[#50a744] font-semibold">
+              Blog
             </Link>
             <Link
               href="/contact"

@@ -29,7 +29,7 @@ export default function CTASection() {
           Modern solutions for modern business
         </h2>
         <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 md:mb-10 max-w-3xl mx-auto">
-          Grow your company to its full potential with Numeriq Tax and Accounting.
+          Grow your company to its full potential with kept.pro.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
