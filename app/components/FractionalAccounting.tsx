@@ -9,7 +9,7 @@ export default function FractionalAccounting() {
             Fractional Accounting for When You Need a Higher Level of Bookkeeping
           </h1>
           <p className="text-lg md:text-xl text-[#393f41] leading-relaxed">
-            Your company's success and growth depend on accurate and timely financial data. When a single bookkeeper isn't enough, partner with kept.pro to access full stack, Quickbooks certified bookkeeping teams, using best-in-class tools and modern accounting systems.
+            Your company's success and growth depend on accurate and timely financial data. When a single bookkeeper isn't enough, partner with Numeriq Tax and Accounting to access full stack, Quickbooks certified bookkeeping teams, using best-in-class tools and modern accounting systems.
           </p>
         </div>
       </div>

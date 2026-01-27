@@ -33,7 +33,7 @@ export default function ServicesPreview() {
               An essential foundation, delivered.
             </h2>
             <p className="text-lg md:text-xl text-white/90 mb-8 md:mb-12">
-              kept.pro provides comprehensive bookkeeping and controller services and a network of fractional CFOs.
+              Numeriq Tax and Accounting provides comprehensive bookkeeping and controller services and a network of fractional CFOs.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
