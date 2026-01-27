@@ -24,28 +24,28 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/services" className="text-gray-700 hover:text-[#50a744] font-semibold transition-colors">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            <Link href="/services" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base">
               Services
             </Link>
-            <Link href="/industries" className="text-gray-700 hover:text-[#50a744] font-semibold transition-colors">
+            <Link href="/industries" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base">
               Industries
             </Link>
-            <Link href="/pricing" className="text-gray-700 hover:text-[#50a744] font-semibold transition-colors">
+            <Link href="/pricing" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base">
               Pricing
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-[#50a744] font-semibold transition-colors">
+            <Link href="/about" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base">
               About
             </Link>
             <Link
               href="/signin"
-              className="text-gray-700 hover:text-[#50a744] font-semibold transition-colors"
+              className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base"
             >
               Sign In
             </Link>
             <Link
               href="/contact"
-              className="bg-[#50a744] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#45993d] transition-colors"
+              className="bg-[#50a744] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#45993d] transition-colors text-sm xl:text-base"
             >
               Get Started
             </Link>
