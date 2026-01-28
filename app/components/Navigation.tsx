@@ -26,41 +26,41 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             <div className="relative group">
-              <Link href="/services" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1">
+              <Link href="/services" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1 no-underline">
                 Services
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </Link>
             </div>
             <div className="relative group">
-              <Link href="/industries" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1">
+              <Link href="/industries" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1 no-underline">
                 Industries
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </Link>
             </div>
             <div className="relative group">
-              <Link href="/about" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1">
+              <Link href="/about" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1 no-underline">
                 About
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </Link>
             </div>
-            <Link href="/pricing" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base">
+            <Link href="/pricing" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base no-underline">
               Pricing
             </Link>
-            <Link href="/blog" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base">
+            <Link href="/blog" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base no-underline">
               Blog
             </Link>
-            <Link
-              href="/contact"
-              className="bg-[#a41a34] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#8b1528] transition-colors text-sm xl:text-base"
+            <button
+              onClick={() => window.location.href = '/contact'}
+              className="bg-[#a41a34] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#8b1528] transition-colors text-sm xl:text-base cursor-pointer"
             >
               Get Started
-            </Link>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -102,12 +102,12 @@ export default function Navigation() {
             <Link href="/blog" className="block text-gray-700 hover:text-[#a41a34] font-semibold">
               Blog
             </Link>
-            <Link
-              href="/contact"
-              className="block bg-[#a41a34] text-white px-6 py-2.5 rounded-lg font-semibold text-center hover:bg-[#8b1528] transition-colors"
+            <button
+              onClick={() => window.location.href = '/contact'}
+              className="w-full bg-[#a41a34] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#8b1528] transition-colors cursor-pointer"
             >
               Get Started
-            </Link>
+            </button>
           </div>
         )}
       </div>

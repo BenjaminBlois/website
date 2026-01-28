@@ -81,15 +81,25 @@ h3 {
   }
 }
 
-a, button {
+a {
   font-weight: 700;
   text-decoration: underline;
   transition: all 0.3s linear;
   color: var(--primary);
 }
 
-a:hover, button:hover {
+a:hover {
   color: var(--primary);
+}
+
+button {
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+
+a.no-underline, button {
+  text-decoration: none;
 }
 
 .container {

@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -16,15 +15,15 @@ export default function Hero() {
             <p className="text-lg md:text-xl lg:text-2xl text-[#393f41] mb-8 leading-relaxed">
               Get complete, accurate, on-time financial statements from U.S.-based bookkeeping experts.
             </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-[#a41a34] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#8b1528] transition-colors"
+            <button
+              onClick={() => window.location.href = '/contact'}
+              className="inline-flex items-center gap-2 bg-[#a41a34] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#8b1528] transition-colors cursor-pointer no-underline"
             >
               Book an Appointment
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </Link>
+            </button>
           </div>
 
           {/* Hero Image */}
