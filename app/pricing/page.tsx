@@ -79,18 +79,23 @@ export default function PricingPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#313d46] mb-6">
-                Transparent, Value-Based Pricing
+                How Pricing Works
               </h1>
               <p className="text-lg text-[#393f41]">
-                We believe in transparent pricing with no hidden fees. Our packages are designed to scale with your business, and you only pay for what you need.
+                We believe in transparent pricing with no hidden fees. Our packages are designed to scale with your business, and you only pay for what you need. Each tier includes comprehensive services tailored to your business size and requirements.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Pricing Tiers */}
+        {/* Tiered Packages Overview */}
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#313d46] mb-4">
+                Tiered Packages Overview
+              </h2>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {tiers.map((tier, index) => (
                 <div

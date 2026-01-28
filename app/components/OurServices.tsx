@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function OurServices() {
   const services = [
     {
-      title: 'Clean Up, Catch Up & Configure Your Books',
+      title: 'Bookkeeping',
       description: 'From transaction coding to designing revenue recognition systems, we know what it takes to deliver accurate data. With Numeriq Tax and Accounting you access:',
       features: [
         'Full stack teams: Controller, Senior Bookkeeper, and Bookkeeper(s)',
@@ -15,11 +15,28 @@ export default function OurServices() {
       ],
       image: '/Accounting.png',
       mobileImage: '/Accounting-Mobile.png',
-      cta: 'Accounting & Booking Services',
+      cta: 'Learn More About Bookkeeping',
       link: '/services#bookkeeping',
     },
     {
-      title: 'Get Expert Oversight With Fractional CFO Services',
+      title: 'Tax Preparation',
+      description: 'Comprehensive tax services to keep your business compliant and maximize your deductions. Our tax experts handle:',
+      features: [
+        'Business tax returns (1120, 1120S, 1065, 1040)',
+        'Quarterly estimated tax payments',
+        'Year-end tax planning',
+        'Tax strategy consultation',
+        'IRS correspondence and audit support',
+        'State and local tax compliance',
+      ],
+      image: '/Accounting.png',
+      mobileImage: '/Accounting-Mobile.png',
+      cta: 'Learn More About Tax Preparation',
+      link: '/services#tax-preparation',
+      reverse: true,
+    },
+    {
+      title: 'Fractional CFO',
       description: 'Partner with a fractional CFO to assist with strategic financial decisions and charting a path for growth. You\'ll benefit from:',
       features: [
         'Advanced forecasting',
@@ -32,6 +49,22 @@ export default function OurServices() {
       mobileImage: '/Fractional CFO-Mobile.png',
       cta: 'Connect with a CFO',
       link: '/services#cfo',
+    },
+    {
+      title: 'Financial Planning',
+      description: 'Strategic financial planning to help you achieve your business goals. Our planning services include:',
+      features: [
+        'Budget development and monitoring',
+        'Cash flow forecasting',
+        'Financial modeling',
+        'Growth planning and scenario analysis',
+        'Capital allocation strategies',
+        'Exit planning and business valuation',
+      ],
+      image: '/Accounting.png',
+      mobileImage: '/Accounting-Mobile.png',
+      cta: 'Learn More About Financial Planning',
+      link: '/services#financial-planning',
       reverse: true,
     },
   ];

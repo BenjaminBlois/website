@@ -58,13 +58,13 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#313d46] mb-6">
-                Our Mission
+                Mission & Philosophy
               </h1>
               <p className="text-lg text-[#393f41] mb-6">
                 At Numeriq Tax and Accounting, we believe that accurate financial data is the foundation of business success. Our mission is to provide comprehensive, reliable accounting services that empower businesses to make informed decisions and achieve sustainable growth.
               </p>
               <p className="text-lg text-[#393f41]">
-                We're committed to delivering exceptional value through personalized service, cutting-edge technology, and a deep understanding of your industry's unique challenges.
+                Our philosophy centers on delivering exceptional value through personalized service, cutting-edge technology, and a deep understanding of your industry's unique challenges. We're not just accountants—we're strategic partners invested in your long-term success.
               </p>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function AboutPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#313d46] mb-4">
-                Our Values
+                Core Values
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
