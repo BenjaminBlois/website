@@ -38,15 +38,15 @@ export default function Footer() {
           </div>
           {/* Services */}
           <div>
-            <h3 className="font-semibold mb-4">Services</h3>
+            <h3 className="font-semibold mb-4 text-base">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services#bookkeeping" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/services#bookkeeping" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Accounting & Bookkeeping
                 </Link>
               </li>
               <li>
-                <Link href="/services#cfo" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/services#cfo" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Fractional CFOs
                 </Link>
               </li>
@@ -55,60 +55,60 @@ export default function Footer() {
 
           {/* Industries */}
           <div>
-            <h3 className="font-semibold mb-4">Industries</h3>
+            <h3 className="font-semibold mb-4 text-base">Industries</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Private Equity Backed Firms
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Construction Companies
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Consulting Firms
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Craft Breweries
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Distributors
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Ecommerce Businesses
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Manufacturers
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Marketing Agencies
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Nonprofits
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Service Businesses
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Software Companies
                 </Link>
               </li>
@@ -117,40 +117,40 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold mb-4 text-base">Company</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
                   How We Work
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Our Mission
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Fractional Accounting Teams
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Frequently Asked Questions
                 </Link>
               </li>
@@ -159,20 +159,20 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
+            <h3 className="font-semibold mb-4 text-base">Contact</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link href="mailto:info@numeriqtaxandaccounting.com" className="hover:text-white transition-colors">
+                <Link href="mailto:info@numeriqtaxandaccounting.com" className="hover:text-white transition-colors text-sm">
                   info@numeriqtaxandaccounting.com
                 </Link>
               </li>
               <li>
-                <Link href="tel:855-537-8776" className="hover:text-white transition-colors">
+                <Link href="tel:855-537-8776" className="hover:text-white transition-colors text-sm">
                   855-537-8776
                 </Link>
               </li>
               <li>
-                <Link href="https://goo.gl/maps/VfdgHdbfd41Hn9f19" className="hover:text-white transition-colors">
+                <Link href="https://goo.gl/maps/VfdgHdbfd41Hn9f19" className="hover:text-white transition-colors text-sm">
                   600 B Street<br />Suite 300<br />San Diego, CA 92101
                 </Link>
               </li>

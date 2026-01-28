@@ -24,7 +24,7 @@ export default function CTASection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-white mb-6 md:mb-8">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold mb-6 md:mb-8 bg-gradient-to-r from-white via-white to-[#0f8ea3] bg-clip-text text-transparent">
           Modern solutions for modern business
         </h2>
         <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 md:mb-10 max-w-3xl mx-auto">
