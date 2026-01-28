@@ -47,7 +47,7 @@ export default function Testimonials() {
             {/* Navigation Arrows */}
             <button
               onClick={prevTestimonial}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-[#50a744] hover:text-[#45993d] transition-colors"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-[#a41a34] hover:text-[#8b1528] transition-colors"
               aria-label="Previous testimonial"
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ export default function Testimonials() {
             </button>
             <button
               onClick={nextTestimonial}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-[#50a744] hover:text-[#45993d] transition-colors"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-[#a41a34] hover:text-[#8b1528] transition-colors"
               aria-label="Next testimonial"
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,7 +95,7 @@ export default function Testimonials() {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentIndex ? 'bg-[#50a744]' : 'bg-gray-300'
+                    index === currentIndex ? 'bg-[#a41a34]' : 'bg-gray-300'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />

@@ -48,11 +48,11 @@ export default function BlogPosts() {
               </div>
               <Link
                 href={post.categoryUrl}
-                className="text-[#50a744] text-sm font-semibold uppercase tracking-wide mb-2 block hover:underline"
+                className="text-[#a41a34] text-sm font-semibold uppercase tracking-wide mb-2 block hover:underline"
               >
                 {post.category}
               </Link>
-              <h3 className="text-lg md:text-xl font-semibold text-[#313d46] group-hover:text-[#50a744] transition-colors">
+              <h3 className="text-lg md:text-xl font-semibold text-[#313d46] group-hover:text-[#a41a34] transition-colors">
                 {post.title}
               </h3>
             </Link>

@@ -18,7 +18,7 @@ export default function Hero() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#50a744] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#45993d] transition-colors"
+              className="inline-flex items-center gap-2 bg-[#a41a34] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#8b1528] transition-colors"
             >
               Book an Appointment
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

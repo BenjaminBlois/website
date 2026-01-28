@@ -96,25 +96,25 @@ export default function PricingPage() {
                 <div
                   key={index}
                   className={`bg-white rounded-lg p-8 border-2 ${
-                    tier.popular ? 'border-[#50a744] shadow-lg' : 'border-gray-200'
+                    tier.popular ? 'border-[#a41a34] shadow-lg' : 'border-gray-200'
                   }`}
                 >
                   {tier.popular && (
-                    <div className="bg-[#50a744] text-white text-sm font-semibold px-4 py-1 rounded-full inline-block mb-4">
+                    <div className="bg-[#a41a34] text-white text-sm font-semibold px-4 py-1 rounded-full inline-block mb-4">
                       Most Popular
                     </div>
                   )}
                   <h3 className="text-2xl font-semibold text-[#313d46] mb-2">
                     {tier.name}
                   </h3>
-                  <p className="text-3xl font-semibold text-[#50a744] mb-2">
+                  <p className="text-3xl font-semibold text-[#a41a34] mb-2">
                     {tier.price}
                   </p>
                   <p className="text-[#393f41] mb-6">{tier.description}</p>
                   <ul className="space-y-3 mb-8">
                     {tier.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
-                        <span className="text-[#50a744] mr-3 font-bold">✓</span>
+                        <span className="text-[#a41a34] mr-3 font-bold">✓</span>
                         <span className="text-[#393f41]">{feature}</span>
                       </li>
                     ))}
@@ -123,7 +123,7 @@ export default function PricingPage() {
                     href="/contact"
                     className={`block text-center px-6 py-3 rounded-lg font-semibold transition-colors ${
                       tier.popular
-                        ? 'bg-[#50a744] text-white hover:bg-[#45993d]'
+                        ? 'bg-[#a41a34] text-white hover:bg-[#8b1528]'
                         : 'bg-gray-100 text-[#313d46] hover:bg-gray-200'
                     }`}
                   >

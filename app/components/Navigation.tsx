@@ -14,11 +14,11 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/Logo.svg"
+              src="/logo.png"
               alt="Numeriq Tax and Accounting"
-              width={150}
-              height={40}
-              className="h-8 w-auto"
+              width={200}
+              height={60}
+              className="h-10 w-auto"
               priority
             />
           </Link>
@@ -26,7 +26,7 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             <div className="relative group">
-              <Link href="/services" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1">
+              <Link href="/services" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1">
                 Services
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -34,7 +34,7 @@ export default function Navigation() {
               </Link>
             </div>
             <div className="relative group">
-              <Link href="/industries" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1">
+              <Link href="/industries" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1">
                 Industries
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -42,22 +42,22 @@ export default function Navigation() {
               </Link>
             </div>
             <div className="relative group">
-              <Link href="/about" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1">
+              <Link href="/about" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1">
                 About
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </Link>
             </div>
-            <Link href="/pricing" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base">
+            <Link href="/pricing" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base">
               Pricing
             </Link>
-            <Link href="/blog" className="text-[#313d46] hover:text-[#50a744] font-semibold transition-colors text-sm xl:text-base">
+            <Link href="/blog" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base">
               Blog
             </Link>
             <Link
               href="/contact"
-              className="bg-[#50a744] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#45993d] transition-colors text-sm xl:text-base"
+              className="bg-[#a41a34] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#8b1528] transition-colors text-sm xl:text-base"
             >
               Get Started
             </Link>
@@ -87,24 +87,24 @@ export default function Navigation() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 space-y-4">
-            <Link href="/services" className="block text-gray-700 hover:text-[#50a744] font-semibold">
+            <Link href="/services" className="block text-gray-700 hover:text-[#a41a34] font-semibold">
               Services
             </Link>
-            <Link href="/industries" className="block text-gray-700 hover:text-[#50a744] font-semibold">
+            <Link href="/industries" className="block text-gray-700 hover:text-[#a41a34] font-semibold">
               Industries
             </Link>
-            <Link href="/pricing" className="block text-gray-700 hover:text-[#50a744] font-semibold">
+            <Link href="/pricing" className="block text-gray-700 hover:text-[#a41a34] font-semibold">
               Pricing
             </Link>
-            <Link href="/about" className="block text-gray-700 hover:text-[#50a744] font-semibold">
+            <Link href="/about" className="block text-gray-700 hover:text-[#a41a34] font-semibold">
               About
             </Link>
-            <Link href="/blog" className="block text-gray-700 hover:text-[#50a744] font-semibold">
+            <Link href="/blog" className="block text-gray-700 hover:text-[#a41a34] font-semibold">
               Blog
             </Link>
             <Link
               href="/contact"
-              className="block bg-[#50a744] text-white px-6 py-2.5 rounded-lg font-semibold text-center hover:bg-[#45993d] transition-colors"
+              className="block bg-[#a41a34] text-white px-6 py-2.5 rounded-lg font-semibold text-center hover:bg-[#8b1528] transition-colors"
             >
               Get Started
             </Link>

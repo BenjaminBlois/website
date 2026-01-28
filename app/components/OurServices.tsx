@@ -7,7 +7,7 @@ export default function OurServices() {
   const services = [
     {
       title: 'Clean Up, Catch Up & Configure Your Books',
-      description: 'From transaction coding to designing revenue recognition systems, we know what it takes to deliver accurate data. With kept.pro you access:',
+      description: 'From transaction coding to designing revenue recognition systems, we know what it takes to deliver accurate data. With Numeriq Tax and Accounting you access:',
       features: [
         'Full stack teams: Controller, Senior Bookkeeper, and Bookkeeper(s)',
         'Comprehensive services (AR/AP, Month End, Payroll, Integrations, KPI\'s, Reporting, 1099 Filing, etc.)',
@@ -76,14 +76,14 @@ export default function OurServices() {
               <ul className="space-y-3 md:space-y-4 mb-8">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start">
-                    <span className="text-[#50a744] mr-3 font-bold text-xl flex-shrink-0 mt-0.5">✓</span>
+                    <span className="text-[#a41a34] mr-3 font-bold text-xl flex-shrink-0 mt-0.5">✓</span>
                     <span className="text-[#393f41] text-sm md:text-base">{feature}</span>
                   </li>
                 ))}
               </ul>
               <Link
                 href={service.link}
-                className="inline-flex items-center gap-2 bg-[#50a744] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-base md:text-lg hover:bg-[#45993d] transition-colors"
+                className="inline-flex items-center gap-2 bg-[#a41a34] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-base md:text-lg hover:bg-[#8b1528] transition-colors"
               >
                 {service.cta}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

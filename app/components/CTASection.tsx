@@ -20,7 +20,7 @@ export default function CTASection() {
           fill
           className="object-cover md:hidden"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#50a744]/90 to-[#0f8ea3]/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#a41a34]/90 to-[#0f8ea3]/90"></div>
       </div>
 
       {/* Content */}
@@ -29,12 +29,12 @@ export default function CTASection() {
           Modern solutions for modern business
         </h2>
         <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 md:mb-10 max-w-3xl mx-auto">
-          Grow your company to its full potential with kept.pro.
+          Grow your company to its full potential with Numeriq Tax and Accounting.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-2 bg-white text-[#50a744] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-white text-[#a41a34] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             Book a Call
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

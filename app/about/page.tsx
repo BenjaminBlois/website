@@ -81,7 +81,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {process.map((item, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg border border-gray-200">
-                  <div className="text-4xl font-bold text-[#50a744] mb-4">
+                  <div className="text-4xl font-bold text-[#a41a34] mb-4">
                     {item.step}
                   </div>
                   <h3 className="text-xl font-semibold text-[#313d46] mb-2">
