@@ -33,7 +33,7 @@ export default function CTASection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={() => window.location.href = '/contact'}
-            className="inline-flex items-center justify-center gap-2 bg-white text-[#a41a34] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 bg-white text-[#a41a34] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
           >
             Book a Call
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,7 +42,7 @@ export default function CTASection() {
           </button>
           <button
             onClick={() => window.location.href = '/contact'}
-            className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-white/10 transition-colors cursor-pointer"
           >
             Contact Us
           </button>

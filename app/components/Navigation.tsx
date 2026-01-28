@@ -55,9 +55,12 @@ export default function Navigation() {
             <Link href="/blog" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base no-underline">
               Blog
             </Link>
+            <Link href="/login" className="text-[#313d46] hover:text-[#a41a34] font-semibold transition-colors text-sm xl:text-base no-underline">
+              Sign In
+            </Link>
             <button
               onClick={() => window.location.href = '/contact'}
-              className="bg-[#a41a34] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#8b1528] transition-colors text-sm xl:text-base cursor-pointer"
+              className="bg-[#a41a34] text-white px-6 py-2.5 rounded-[30px] font-semibold hover:bg-[#8b1528] transition-colors text-sm xl:text-base cursor-pointer"
             >
               Get Started
             </button>
@@ -102,9 +105,12 @@ export default function Navigation() {
             <Link href="/blog" className="block text-gray-700 hover:text-[#a41a34] font-semibold">
               Blog
             </Link>
+            <Link href="/login" className="block text-gray-700 hover:text-[#a41a34] font-semibold">
+              Sign In
+            </Link>
             <button
               onClick={() => window.location.href = '/contact'}
-              className="w-full bg-[#a41a34] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#8b1528] transition-colors cursor-pointer"
+              className="w-full bg-[#a41a34] text-white px-6 py-2.5 rounded-[30px] font-semibold hover:bg-[#8b1528] transition-colors cursor-pointer"
             >
               Get Started
             </button>

@@ -83,7 +83,7 @@ export default function OurServices() {
               </ul>
               <Link
                 href={service.link}
-                className="inline-flex items-center gap-2 bg-[#a41a34] text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-base md:text-lg hover:bg-[#8b1528] transition-colors"
+                className="inline-flex items-center gap-2 bg-[#a41a34] text-white px-6 py-3 md:px-8 md:py-4 rounded-[30px] font-semibold text-base md:text-lg hover:bg-[#8b1528] transition-colors"
               >
                 {service.cta}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

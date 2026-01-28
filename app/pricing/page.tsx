@@ -121,7 +121,7 @@ export default function PricingPage() {
                   </ul>
                   <a
                     href="/contact"
-                    className={`block text-center px-6 py-3 rounded-lg font-semibold transition-colors ${
+                    className={`block text-center px-6 py-3 rounded-[30px] font-semibold transition-colors ${
                       tier.popular
                         ? 'bg-[#a41a34] text-white hover:bg-[#8b1528]'
                         : 'bg-gray-100 text-[#313d46] hover:bg-gray-200'

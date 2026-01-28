@@ -17,7 +17,7 @@ export default function HowWeWork() {
             </p>
             <Link
               href="/about#how-we-work"
-              className="inline-flex items-center gap-2 bg-white text-[#0f8ea3] px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center gap-2 bg-white text-[#0f8ea3] px-6 py-3 rounded-[30px] font-semibold hover:bg-gray-100 transition-colors"
             >
               How We Integrate
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
