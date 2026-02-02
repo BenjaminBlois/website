@@ -8,7 +8,7 @@ export default function HowWeWork() {
     <section className="py-12 md:py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-[#0f8ea3] rounded-lg p-8 md:p-12 lg:p-16 text-white">
+          <div className="bg-[#2AA198] rounded-lg p-8 md:p-12 lg:p-16 text-white">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6">
               How We Work
             </h2>
@@ -17,7 +17,7 @@ export default function HowWeWork() {
             </p>
             <Link
               href="/about#how-we-work"
-              className="inline-flex items-center gap-2 bg-white text-[#0f8ea3] px-6 py-3 rounded-[30px] font-semibold hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center gap-2 bg-white text-[#2AA198] px-6 py-3 rounded-[30px] font-semibold hover:bg-gray-100 transition-colors"
             >
               How We Integrate
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

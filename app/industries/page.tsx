@@ -89,7 +89,7 @@ export default function IndustriesPage() {
                     <ul className="space-y-1">
                       {industry.expertise.map((item, idx) => (
                         <li key={idx} className="flex items-start">
-                          <span className="text-[#a41a34] mr-2 font-bold">•</span>
+                          <span className="text-[#1A3B5D] mr-2 font-bold">•</span>
                           <span className="text-sm text-[#393f41]">{item}</span>
                         </li>
                       ))}

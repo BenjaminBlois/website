@@ -38,7 +38,7 @@ export default function IndustriesPreview() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl md:text-2xl font-semibold text-[#313d46] group-hover:text-[#a41a34] transition-colors">
+                <h3 className="text-xl md:text-2xl font-semibold text-[#313d46] group-hover:text-[#1A3B5D] transition-colors">
                   {industry.name}
                 </h3>
               </div>
@@ -49,7 +49,7 @@ export default function IndustriesPreview() {
         <div className="text-center mt-10 md:mt-12">
           <Link
             href="/industries"
-            className="inline-flex items-center gap-2 text-[#a41a34] font-semibold text-lg hover:underline"
+            className="inline-flex items-center gap-2 text-[#1A3B5D] font-semibold text-lg hover:underline"
           >
             View All Industries
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
