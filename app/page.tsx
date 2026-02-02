@@ -19,12 +19,12 @@ export default function Home() {
       <FractionalAccounting />
       <ServicesPreview />
       <OurServices />
-      <Testimonials />
       <IndustriesPreview />
       <HowWeWork />
       <Integrations />
       <BlogPosts />
       <CTASection />
+      <Testimonials />
       <Footer />
     </main>
   );
