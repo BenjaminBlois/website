@@ -9,6 +9,7 @@ import HowWeWork from './components/HowWeWork';
 import Integrations from './components/Integrations';
 import BlogPosts from './components/BlogPosts';
 import CTASection from './components/CTASection';
+import BuiltForYourBusiness from './components/BuiltForYourBusiness';
 import Footer from './components/Footer';
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <ServicesPreview />
       <OurServices />
       <IndustriesPreview />
+      <BuiltForYourBusiness />
       <HowWeWork />
       <Integrations />
       <BlogPosts />
