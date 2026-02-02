@@ -17,16 +17,16 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Navigation />
       <Hero />
-      <FractionalAccounting />
+      <BuiltForYourBusiness />
       <ServicesPreview />
       <OurServices />
       <IndustriesPreview />
-      <BuiltForYourBusiness />
       <HowWeWork />
       <Integrations />
       <BlogPosts />
       <CTASection />
       <Testimonials />
+      <FractionalAccounting />
       <Footer />
     </main>
   );
