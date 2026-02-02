@@ -12,77 +12,59 @@ interface TabContent {
   description: string;
   mediaType: 'video' | 'image';
   mediaSrc: string;
+  iconSrc: string;
 }
 
 const tabs: TabContent[] = [
   {
-    id: 'strength',
-    label: 'Strength',
-    title: 'Strength',
-    description: '',
+    id: 'bookkeeping',
+    label: 'Bookkeeping',
+    title: 'Bookkeeping',
+    description: 'We handle your day-to-day bookkeeping and monthly close so your financials are accurate, organized, and always up to date — giving you clear visibility into your business at any time.',
     mediaType: 'image',
     mediaSrc: '/Accounting.png',
+    iconSrc: '/bookkeeping-icon.png',
   },
   {
-    id: 'functional-fitness',
-    label: 'Functional fitness',
-    title: 'Functional fitness',
-    description: '',
+    id: 'tax-prep',
+    label: 'Individual/Business Tax Prep',
+    title: 'Individual/Business Tax Prep',
+    description: 'Comprehensive tax preparation for individuals and businesses, ensuring returns are accurate, compliant, and optimized to reduce surprises and allows you to sit back stress-free.',
     mediaType: 'image',
     mediaSrc: '/Accounting.png',
+    iconSrc: '/tax-icon.png',
   },
   {
-    id: 'hiit',
-    label: 'HIIT',
-    title: 'HIIT',
-    description: '',
+    id: 'cfo',
+    label: 'Fractional CFO',
+    title: 'Fractional CFO',
+    description: 'High-level financial leadership to help you plan for growth, manage cash flow, and make strategic decisions — without the cost of a full-time CFO.',
     mediaType: 'image',
     mediaSrc: '/Accounting.png',
+    iconSrc: '/cfo-icon.png',
   },
   {
-    id: 'yoga',
-    label: 'Yoga',
-    title: 'Yoga',
-    description: '',
+    id: 'financial-analysis',
+    label: 'Financial Analysis & Strategy',
+    title: 'Financial Analysis & Strategy',
+    description: 'In-depth financial analysis, forecasting, and strategic planning that turns your numbers into clear insights you can use to drive smarter decisions.',
     mediaType: 'image',
     mediaSrc: '/Accounting.png',
+    iconSrc: '/financial-analysis-icon.png',
   },
   {
-    id: 'pilates',
-    label: 'Pilates',
-    title: 'Pilates',
-    description: '',
+    id: 'entity-setup',
+    label: 'Entity Set Up',
+    title: 'Entity Set Up',
+    description: 'Guidance and execution for selecting and setting up the right business entity, structured correctly from the start to support compliance, tax efficiency, and long-term goals.',
     mediaType: 'image',
     mediaSrc: '/Accounting.png',
-  },
-  {
-    id: 'spin',
-    label: 'Spin cycle',
-    title: 'Spin cycle',
-    description: '',
-    mediaType: 'image',
-    mediaSrc: '/Accounting.png',
-  },
-  {
-    id: 'recovery',
-    label: 'Recovery',
-    title: 'Recovery',
-    description: '',
-    mediaType: 'image',
-    mediaSrc: '/Accounting.png',
-  },
-  {
-    id: 'boxing',
-    label: 'Boxing',
-    title: 'Boxing',
-    description: '',
-    mediaType: 'image',
-    mediaSrc: '/Accounting.png',
+    iconSrc: '/entity-icon.png',
   },
 ];
 
 export default function BuiltForYourBusiness() {
-  const [activeTab, setActiveTab] = useState('strength');
+  const [activeTab, setActiveTab] = useState('bookkeeping');
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -126,7 +108,7 @@ export default function BuiltForYourBusiness() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`relative flex flex-row items-center justify-center rounded-[40px] border-none px-2 sm:px-3 md:px-4 py-2 font-medium cursor-pointer min-h-[40px] flex-1 text-[10px] xs:text-xs sm:text-sm transition-all duration-300 ${
+                  className={`relative flex flex-row items-center justify-center gap-1 rounded-[40px] border-none px-2 sm:px-3 md:px-4 py-2 font-medium cursor-pointer min-h-[40px] flex-1 text-[10px] xs:text-xs sm:text-sm transition-all duration-300 ${
                     activeTab === tab.id
                       ? 'bg-[#1A3B5D] text-white hover:bg-[#0f2a3f] active:bg-[#0a1f2e]'
                       : 'bg-white text-[#313d46] hover:bg-gray-100 active:bg-gray-200'
@@ -138,7 +120,14 @@ export default function BuiltForYourBusiness() {
                     flexGrow: 1
                   }}
                 >
-                  {tab.label}
+                  <span>{tab.label}</span>
+                  <Image
+                    src={tab.iconSrc}
+                    alt=""
+                    width={12}
+                    height={12}
+                    className="w-3 h-3 flex-shrink-0"
+                  />
                 </button>
               ))}
             </div>
@@ -162,6 +151,14 @@ export default function BuiltForYourBusiness() {
                   style={{ width: '100%', maxWidth: '100%', overflowX: 'hidden' }}
                 >
                   <div className="w-full mx-auto h-full flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10 items-center pb-4" style={{ width: '100%', maxWidth: '100%', paddingLeft: '0.5rem', paddingRight: '0.5rem' }}>
+                    {/* Description */}
+                    {tab.description && (
+                      <div className="w-full max-w-3xl text-center">
+                        <p className="text-base md:text-lg text-[#393f41] leading-relaxed">
+                          {tab.description}
+                        </p>
+                      </div>
+                    )}
                     {/* Image/Video */}
                     <div className="w-full overflow-hidden" style={{ aspectRatio: '16/9', maxWidth: '90%', borderRadius: '20px' }}>
                       {tab.mediaType === 'video' ? (
