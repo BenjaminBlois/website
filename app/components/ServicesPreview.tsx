@@ -3,20 +3,24 @@
 export default function ServicesPreview() {
   const services = [
     {
-      title: 'Quality Financials',
-      description: 'Get accurate, actionable data that informs your important business decisions.',
+      title: 'Accuracy You Can Rely On',
+      description: 'We handle your bookkeeping and tax preparation with precision, so your financials are always correct, organized, and ready for confident decision-making.',
+      icon: 'checkmark',
     },
     {
-      title: 'Financial Credibility',
-      description: 'Ensure your bank, investors, and board trust the books.',
+      title: 'Clear Communication',
+      description: 'We explain your finances in plain language and keep you informed every step of the way, so you never feel lost or overwhelmed.',
+      icon: 'chat',
     },
     {
-      title: 'Informed Growth',
-      description: 'Maximize your cash for growth and minimize uncertainty and risk.',
+      title: 'Transparent, Upfront Pricing',
+      description: 'We offer fixed pricing customized to your needs, built around your specific needs.',
+      icon: 'dollar',
     },
     {
-      title: 'Fraud Mitigation',
-      description: 'Gain team oversight with a modern cybersecurity infrastructure.',
+      title: 'Proactive, Not Reactive',
+      description: 'We don't just file and forget — we anticipate issues, offer guidance, and help you stay ahead with planning, strategy, and financial clarity.',
+      icon: 'arrow',
     },
   ];
 
@@ -30,7 +34,7 @@ export default function ServicesPreview() {
           
           <div className="pl-6 md:pl-8">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-2">
-              An essential foundation, delivered.
+              Why People Choose Numeriq
             </h2>
             <p className="text-lg md:text-xl text-white/90 mb-8 md:mb-12">
               Numeriq Tax and Accounting provides comprehensive bookkeeping and controller services and a network of fractional CFOs.
@@ -41,24 +45,24 @@ export default function ServicesPreview() {
                 <div key={index} className="text-white">
                   <div className="mb-3">
                     <div className="w-12 h-12 bg-[#1A3B5D] rounded-full flex items-center justify-center mb-3">
-                      {index === 0 && (
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                      )}
-                      {index === 1 && (
+                      {service.icon === 'checkmark' && (
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                       )}
-                      {index === 2 && (
+                      {service.icon === 'chat' && (
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
                       )}
-                      {index === 3 && (
+                      {service.icon === 'dollar' && (
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      )}
+                      {service.icon === 'arrow' && (
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
                       )}
                     </div>
