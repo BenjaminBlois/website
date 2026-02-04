@@ -19,7 +19,7 @@ export default function Hero() {
               onClick={() => window.location.href = '/contact'}
               className="inline-flex items-center gap-2 bg-[#1A3B5D] text-white px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-[#0f2a3f] transition-colors cursor-pointer no-underline"
             >
-              Book an Appointment
+              Book a Call
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -29,7 +29,7 @@ export default function Hero() {
           {/* Hero Image */}
           <div className="flex-1 w-full lg:w-auto">
             <Image
-              src="/Hero.png"
+              src="/hero-image.png"
               alt="Professional accounting team"
               width={800}
               height={600}
