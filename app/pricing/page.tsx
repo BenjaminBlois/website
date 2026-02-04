@@ -132,7 +132,7 @@ export default function PricingPage() {
                         : 'bg-gray-100 text-[#313d46] hover:bg-gray-200'
                     }`}
                   >
-                    Get Started
+                    Book a Call
                   </a>
                 </div>
               ))}

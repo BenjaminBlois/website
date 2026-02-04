@@ -7,17 +7,11 @@ export default function Footer() {
   return (
     <footer className="bg-[#313d46] text-white py-12 md:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo and Badges */}
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center mb-4">
-              <Image
-                src="/logo.png"
-                alt="Numeriq Tax and Accounting"
-                width={150}
-                height={40}
-                className="h-10 w-auto"
-              />
+            <Link href="/" className="no-underline mb-4">
+              <span className="font-['DM_Sans'] font-medium text-2xl text-white">Numeriq</span>
             </Link>
             <div className="flex gap-4">
               <Image
@@ -36,80 +30,29 @@ export default function Footer() {
               />
             </div>
           </div>
+
           {/* Services */}
           <div>
             <h3 className="font-semibold mb-4 text-base">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services#bookkeeping" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Accounting & Bookkeeping
+                <Link href="/services/individual" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Personal Tax Services
                 </Link>
               </li>
               <li>
-                <Link href="/services#cfo" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Fractional CFOs
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Industries */}
-          <div>
-            <h3 className="font-semibold mb-4 text-base">Industries</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Private Equity Backed Firms
+                <Link href="/services/business" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Business Services
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Construction Companies
+                <Link href="/services/business#bookkeeping" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Bookkeeping
                 </Link>
               </li>
               <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Consulting Firms
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Craft Breweries
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Distributors
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Ecommerce Businesses
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Manufacturers
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Marketing Agencies
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Nonprofits
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Service Businesses
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Software Companies
+                <Link href="/services/business#cfo" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Fractional CFO
                 </Link>
               </li>
             </ul>
@@ -121,37 +64,17 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/about#how-we-work" className="text-gray-300 hover:text-white transition-colors text-sm">
                   How We Work
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Our Mission
-                </Link>
-              </li>
-              <li>
-                <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Careers
                 </Link>
               </li>
               <li>
                 <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors text-sm">
                   Pricing
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Fractional Accounting Teams
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
-                  Frequently Asked Questions
                 </Link>
               </li>
             </ul>
@@ -192,14 +115,6 @@ export default function Footer() {
               <Link href="/terms" className="text-gray-300 hover:text-white text-sm transition-colors">
                 Terms Of Service
               </Link>
-              <div className="relative group">
-                <button className="text-gray-300 hover:text-white text-sm transition-colors flex items-center gap-1">
-                  Cities
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-              </div>
             </div>
           </div>
         </div>

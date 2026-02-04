@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -114,4 +114,13 @@ a.no-underline, button {
   .container {
     max-width: 82.25rem;
   }
+}
+
+/* Logo text style */
+.logo-text {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #000000;
+  text-decoration: none;
 }
