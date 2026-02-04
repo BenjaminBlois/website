@@ -19,7 +19,7 @@ export default function ServicesPreview() {
     },
     {
       title: 'Proactive, Not Reactive',
-      description: 'We don't just file and forget — we anticipate issues, offer guidance, and help you stay ahead with planning, strategy, and financial clarity.',
+      description: "We don't just file and forget — we anticipate issues, offer guidance, and help you stay ahead with planning, strategy, and financial clarity.",
       icon: 'arrow',
     },
   ];
