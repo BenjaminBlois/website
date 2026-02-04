@@ -1,7 +1,6 @@
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import ServicesPreview from './components/ServicesPreview';
-import OurServices from './components/OurServices';
 import IndustriesPreview from './components/IndustriesPreview';
 import HowWeWork from './components/HowWeWork';
 import CTASection from './components/CTASection';
@@ -16,7 +15,6 @@ export default function Home() {
       <Hero />
       <BuiltForYourBusiness />
       <ServicesPreview />
-      <OurServices />
       <IndustriesPreview />
       <HowWeWork />
       <Testimonials />
