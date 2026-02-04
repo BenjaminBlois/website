@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Footer() {
+  const linkStyle = "text-gray-300 hover:text-white transition-colors text-sm no-underline font-normal";
+  
   return (
     <footer className="bg-[#313d46] text-white py-12 md:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,25 +35,25 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold mb-4 text-base">Services</h3>
+            <h3 className="font-semibold mb-4 text-base text-white">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services/individual" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/services/individual" className={linkStyle}>
                   Personal Tax Services
                 </Link>
               </li>
               <li>
-                <Link href="/services/business" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/services/business" className={linkStyle}>
                   Business Services
                 </Link>
               </li>
               <li>
-                <Link href="/services/business#bookkeeping" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/services/business#bookkeeping" className={linkStyle}>
                   Bookkeeping
                 </Link>
               </li>
               <li>
-                <Link href="/services/business#cfo" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/services/business#cfo" className={linkStyle}>
                   Fractional CFO
                 </Link>
               </li>
@@ -60,20 +62,20 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold mb-4 text-base">Company</h3>
+            <h3 className="font-semibold mb-4 text-base text-white">Company</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/about" className={linkStyle}>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/about#how-we-work" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/about#how-we-work" className={linkStyle}>
                   How We Work
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <Link href="/pricing" className={linkStyle}>
                   Pricing
                 </Link>
               </li>
@@ -82,20 +84,20 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-4 text-base">Contact</h3>
-            <ul className="space-y-2 text-gray-300">
+            <h3 className="font-semibold mb-4 text-base text-white">Contact</h3>
+            <ul className="space-y-2">
               <li>
-                <Link href="mailto:info@numeriqtaxandaccounting.com" className="hover:text-white transition-colors text-sm">
+                <Link href="mailto:info@numeriqtaxandaccounting.com" className={linkStyle}>
                   info@numeriqtaxandaccounting.com
                 </Link>
               </li>
               <li>
-                <Link href="tel:855-537-8776" className="hover:text-white transition-colors text-sm">
+                <Link href="tel:855-537-8776" className={linkStyle}>
                   855-537-8776
                 </Link>
               </li>
               <li>
-                <Link href="https://goo.gl/maps/VfdgHdbfd41Hn9f19" className="hover:text-white transition-colors text-sm">
+                <Link href="https://goo.gl/maps/VfdgHdbfd41Hn9f19" className={linkStyle}>
                   600 B Street<br />Suite 300<br />San Diego, CA 92101
                 </Link>
               </li>
@@ -109,10 +111,10 @@ export default function Footer() {
               © 2026 Numeriq Tax and Accounting
             </p>
             <div className="flex items-center gap-6 flex-wrap">
-              <Link href="/privacy" className="text-gray-300 hover:text-white text-sm transition-colors">
+              <Link href="/privacy" className={linkStyle}>
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-300 hover:text-white text-sm transition-colors">
+              <Link href="/terms" className={linkStyle}>
                 Terms Of Service
               </Link>
             </div>
