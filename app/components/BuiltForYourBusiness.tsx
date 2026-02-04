@@ -108,7 +108,7 @@ export default function BuiltForYourBusiness() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`relative flex flex-row items-center justify-center gap-1 rounded-[40px] border-none px-2 sm:px-3 md:px-4 py-2 font-medium cursor-pointer min-h-[40px] flex-1 text-[10px] xs:text-xs sm:text-sm transition-all duration-300 ${
+                  className={`relative flex flex-col items-center justify-center gap-2 rounded-[40px] border-none px-2 sm:px-3 md:px-4 py-3 font-medium cursor-pointer min-h-[60px] flex-1 text-[10px] xs:text-xs sm:text-sm transition-all duration-300 ${
                     activeTab === tab.id
                       ? 'bg-[#1A3B5D] text-white hover:bg-[#0f2a3f] active:bg-[#0a1f2e]'
                       : 'bg-white text-[#313d46] hover:bg-gray-100 active:bg-gray-200'
@@ -124,9 +124,9 @@ export default function BuiltForYourBusiness() {
                   <Image
                     src={tab.iconSrc}
                     alt=""
-                    width={12}
-                    height={12}
-                    className="w-3 h-3 flex-shrink-0"
+                    width={24}
+                    height={24}
+                    className="w-6 h-6 flex-shrink-0"
                   />
                 </button>
               ))}
