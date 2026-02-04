@@ -24,8 +24,11 @@ export default function CTASection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold mb-6 md:mb-8 text-white">
-          Let's Simplify Your Finances
+        <h2 
+          className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold mb-6 md:mb-8 text-white"
+          style={{ textShadow: '0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.2)' }}
+        >
+          Let&apos;s Simplify Your Finances
         </h2>
         <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 md:mb-10 max-w-3xl mx-auto">
           Get the guidance you need to keep your finances organized, accurate, and stress-free.
