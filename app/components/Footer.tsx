@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Logo and Badges */}
           <div className="flex flex-col gap-4">
             <Link href="/" className="no-underline mb-4">
-              <span className="font-['DM_Sans'] font-medium text-2xl text-white">Numeriq</span>
+              <img src="/logo.png" alt="Numeriq" className="h-8 w-auto brightness-0 invert" />
             </Link>
             <div className="flex gap-4">
               <Image
