@@ -47,7 +47,7 @@ export default function IndividualServicesPage() {
                 We help individuals file accurate tax returns, understand their finances, and stay compliant—without confusion or last-minute stress.
               </p>
               <button
-                onClick={() => window.location.href = '/contact'}
+                onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
                 className="inline-flex items-center gap-2 bg-white text-[#1A3B5D] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
               >
                 Book a Call
@@ -181,7 +181,7 @@ export default function IndividualServicesPage() {
             Get the guidance you need to keep your finances organized, accurate, and stress-free.
           </p>
           <button
-            onClick={() => window.location.href = '/contact'}
+            onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
             className="inline-flex items-center justify-center gap-2 bg-white text-[#1A3B5D] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
           >
             Book a Call

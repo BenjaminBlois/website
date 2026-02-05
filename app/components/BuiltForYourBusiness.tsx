@@ -127,6 +127,7 @@ export default function BuiltForYourBusiness() {
                     width={24}
                     height={24}
                     className="w-6 h-6 flex-shrink-0"
+                    style={{ filter: activeTab === tab.id ? 'invert(1) brightness(2)' : 'none' }}
                   />
                 </button>
               ))}

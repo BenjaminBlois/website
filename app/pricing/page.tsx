@@ -125,7 +125,7 @@ export default function PricingPage() {
                     ))}
                   </ul>
                   <a
-                    href="/contact"
+                    href="https://form.jotform.com/260287243172152"
                     className={`block text-center px-6 py-3 rounded-[30px] font-semibold transition-colors ${
                       tier.popular
                         ? 'bg-[#1A3B5D] text-white hover:bg-[#0f2a3f]'

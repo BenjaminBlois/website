@@ -44,7 +44,7 @@ export default function Navigation() {
               Sign In
             </Link>
             <button
-              onClick={() => window.location.href = '/contact'}
+              onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
               className="bg-[#1A3B5D] text-white px-6 py-2.5 rounded-[30px] font-semibold hover:bg-[#0f2a3f] transition-colors text-sm xl:text-base cursor-pointer"
             >
               Book a Call
@@ -94,7 +94,7 @@ export default function Navigation() {
               Sign In
             </Link>
             <button
-              onClick={() => window.location.href = '/contact'}
+              onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
               className="w-full bg-[#1A3B5D] text-white px-6 py-2.5 rounded-[30px] font-semibold hover:bg-[#0f2a3f] transition-colors cursor-pointer"
             >
               Book a Call

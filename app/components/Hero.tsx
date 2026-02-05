@@ -16,7 +16,7 @@ export default function Hero() {
               Tax preparation and accounting services for individuals and businesses who want clarity, accuracy, and maximize peace of mind.
             </p>
             <button
-              onClick={() => window.location.href = '/contact'}
+              onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
               className="inline-flex items-center gap-2 bg-[#1A3B5D] text-white px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-[#0f2a3f] transition-colors cursor-pointer no-underline"
             >
               Book a Call
