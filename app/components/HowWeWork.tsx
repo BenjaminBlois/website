@@ -1,29 +1,77 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function HowWeWork() {
+  const steps = [
+    {
+      number: 1,
+      title: 'Book Your Free Consultation',
+      description: 'Schedule a call so we can understand your personal or business financial needs.',
+    },
+    {
+      number: 2,
+      title: 'We Analyze Your Finances',
+      description: 'Our team analyzes your finances and identifies the best approach for your goals.',
+    },
+    {
+      number: 3,
+      title: 'Receive a Customized Plan',
+      description: 'We create a fixed, tailored plan designed specifically for your tax or accounting needs.',
+    },
+    {
+      number: 4,
+      title: 'We Take Care of Everything',
+      description: 'From bookkeeping to tax prep or CFO-level guidance, we take care of the details accurately and efficiently.',
+    },
+    {
+      number: 5,
+      title: 'Ongoing Support',
+      description: 'We review results with you, answer questions, and provide proactive guidance so your finances stay organized and optimized.',
+    },
+  ];
+
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-white">
+    <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-[#2AA198] rounded-lg p-8 md:p-12 lg:p-16 text-white">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6">
-              How We Work
-            </h2>
-            <p className="text-lg md:text-xl mb-8 leading-relaxed">
-              Numeriq Tax and Accounting delivers complete outsourced accounting and bookkeeping teams, or we can augment your existing internal capacity. We work with you as an integrated partner, structurally invested in your success, and scalable as you grow.
-            </p>
-            <Link
-              href="/about#how-we-work"
-              className="inline-flex items-center gap-2 bg-white text-[#2AA198] px-6 py-3 rounded-[30px] font-semibold hover:bg-gray-100 transition-colors"
-            >
-              How We Integrate
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Left side - Steps */}
+            <div>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#313d46] mb-8">
+                How It Works
+              </h2>
+              <div className="space-y-6">
+                {steps.map((step) => (
+                  <div key={step.number} className="flex gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-[#1A3B5D] text-white rounded-full flex items-center justify-center font-semibold text-lg">
+                      {step.number}
+                    </div>
+                    <div>
+                      <h3 className="text-lg md:text-xl font-semibold text-[#313d46] mb-1">
+                        {step.title}
+                      </h3>
+                      <p className="text-[#393f41] text-sm md:text-base">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right side - Image */}
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/about-why-we-started.png"
+                  alt="Team consulting with clients"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
