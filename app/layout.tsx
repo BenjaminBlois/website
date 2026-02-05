@@ -5,9 +5,9 @@ export const metadata: Metadata = {
   title: "Numeriq Tax and Accounting | Professional Bookkeeping & CFO Services",
   description: "Get complete, accurate, on-time financial statements from U.S.-based bookkeeping experts. Professional accounting, bookkeeping, and fractional CFO services.",
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
     title: "Numeriq Tax and Accounting",
