@@ -101,6 +101,15 @@ a.no-underline, button {
   text-decoration: none;
 }
 
+/* Button-style links should keep their text color */
+a.text-white {
+  color: #ffffff !important;
+}
+
+a.text-white:hover {
+  color: #ffffff !important;
+}
+
 /* Footer link overrides */
 footer a {
   color: #d1d5db;
