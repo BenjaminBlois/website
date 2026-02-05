@@ -48,7 +48,7 @@ export default function HowWeWork() {
                       {step.number}
                     </div>
                     <div>
-                      <h3 className="text-lg md:text-xl font-semibold text-[#313d46] mb-1">
+                      <h3 className="text-base md:text-lg font-semibold text-[#313d46] mb-1">
                         {step.title}
                       </h3>
                       <p className="text-[#393f41] text-sm md:text-base">
