@@ -27,7 +27,7 @@ export default function BusinessServicesPage() {
     },
     {
       title: 'Fractional CFO Services',
-      description: 'Strategic financial oversight, forecasting, and guidance—without the cost of a full-time CFO.',
+      description: 'Strategic financial oversight, forecasting, and guidance-without the cost of a full-time CFO.',
       icon: 'chart',
     },
     {
@@ -170,7 +170,7 @@ export default function BusinessServicesPage() {
               Who We Work With
             </h2>
             <p className="text-lg text-[#393f41] mb-8">
-              Our business services support companies at every stage—from new entities to complex, multi-entity organizations.
+              Our business services support companies at every stage-from new entities to complex, multi-entity organizations.
             </p>
             <p className="text-lg text-[#393f41] mb-6">We commonly work with:</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

@@ -42,7 +42,7 @@ export default function PricingPage() {
             Fixed Pricing. Tailored for You.
           </h1>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-            Every service we offer comes with a clear, fixed price customized to your needs. Know exactly what you're paying—no surprises, no hourly fees.
+            Every service we offer comes with a clear, fixed price customized to your needs. Know exactly what you're paying-no surprises, no hourly fees.
           </p>
         </div>
       </section>

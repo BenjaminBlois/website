@@ -23,7 +23,7 @@ export default function AboutPage() {
     },
     {
       title: 'Proactive, Not Reactive',
-      description: "We don't just file and forget — we anticipate issues, offer guidance, and help you stay ahead with planning, strategy, and financial clarity.",
+      description: "We don't just file and forget - we anticipate issues, offer guidance, and help you stay ahead with planning, strategy, and financial clarity.",
       icon: 'arrow',
     },
   ];
@@ -72,7 +72,7 @@ export default function AboutPage() {
                 Built on Accuracy, Transparency, and Trust.
               </h1>
               <p className="text-lg md:text-xl text-white/90">
-                Numeriq was founded to give individuals and businesses clear, reliable financial support—without the confusion, stress, or surprise costs.
+                Numeriq was founded to give individuals and businesses clear, reliable financial support-without the confusion, stress, or surprise costs.
               </p>
             </div>
             <div className="relative">
@@ -110,7 +110,7 @@ export default function AboutPage() {
                   We started Numeriq after seeing how often individuals and business owners felt left in the dark about their finances. Too many firms overcomplicate the process, communicate poorly, or charge unpredictably.
                 </p>
                 <p>
-                  Our goal was simple: provide accurate accounting, clear communication, and fixed pricing—so clients always know where they stand and what they're paying for.
+                  Our goal was simple: provide accurate accounting, clear communication, and fixed pricing-so clients always know where they stand and what they're paying for.
                 </p>
                 <p>
                   Whether you're filing a personal tax return or managing a growing business, we believe financial clarity should be accessible, proactive, and stress-free.

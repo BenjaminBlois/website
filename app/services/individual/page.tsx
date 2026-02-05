@@ -46,7 +46,7 @@ export default function IndividualServicesPage() {
                 Simple, Stress-Free Tax Support
               </h1>
               <p className="text-lg md:text-xl text-white/90 mb-8">
-                We help individuals file accurate tax returns, understand their finances, and stay compliant—without confusion or last-minute stress.
+                We help individuals file accurate tax returns, understand their finances, and stay compliant-without confusion or last-minute stress.
               </p>
               <button
                 onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
