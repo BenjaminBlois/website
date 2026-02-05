@@ -145,19 +145,30 @@ export default function BusinessServicesPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#1A3B5D] to-[#2AA198] py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-6">
-              Accounting Built for Growing Businesses
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8">
-              From bookkeeping to tax preparation and CFO-level guidance, we help businesses stay organized, compliant, and financially confident.
-            </p>
-            <button
-              onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-              className="inline-flex items-center gap-2 bg-white text-[#1A3B5D] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
-            >
-              Book a Call
-            </button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-6">
+                Accounting Built for Growing Businesses
+              </h1>
+              <p className="text-lg md:text-xl text-white/90 mb-8">
+                From bookkeeping to tax preparation and CFO-level guidance, we help businesses stay organized, compliant, and financially confident.
+              </p>
+              <button
+                onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
+                className="inline-flex items-center gap-2 bg-white text-[#1A3B5D] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
+              >
+                Book a Call
+              </button>
+            </div>
+            <div className="relative">
+              <Image
+                src="/business-services-hero.png"
+                alt="Business financial dashboard"
+                width={600}
+                height={450}
+                className="rounded-2xl shadow-2xl w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
