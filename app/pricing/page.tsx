@@ -43,6 +43,13 @@ const services: ServicePricing[] = [
     ctaText: 'Get Your Quote',
     ctaHref: 'https://form.jotform.com/260287243172152',
   },
+  {
+    name: 'Entity Setup & Structuring',
+    description: 'Guidance on business formation and structure to ensure your company starts off right.',
+    pricing: 'Fixed',
+    ctaText: 'Get Your Quote',
+    ctaHref: 'https://form.jotform.com/260287243172152',
+  },
 ];
 
 export default function PricingPage() {
@@ -70,7 +77,7 @@ export default function PricingPage() {
       {/* Pricing Cards */}
       <section ref={ref} className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {services.map((service, index) => (
               <motion.div
                 key={service.name}
