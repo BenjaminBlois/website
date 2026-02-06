@@ -15,22 +15,6 @@ export default function Footer() {
             <Link href="/" className="no-underline mb-4" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: '1.5rem', color: '#ffffff', textDecoration: 'none' }}>
               numeriq
             </Link>
-            <div className="flex gap-4">
-              <Image
-                src="/qb-elite-badge.png"
-                alt="QuickBooks ProAdvisor Elite"
-                width={80}
-                height={80}
-                className="w-16 h-16 object-contain"
-              />
-              <Image
-                src="/qb-level-two-badge.png"
-                alt="QuickBooks Level 2 ProAdvisor"
-                width={80}
-                height={80}
-                className="w-16 h-16 object-contain"
-              />
-            </div>
           </div>
 
           {/* Services */}
