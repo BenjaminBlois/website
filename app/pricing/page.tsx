@@ -204,7 +204,6 @@ export default function PricingPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 
             className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4"
-            style={{ textShadow: '0 0 30px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.2)' }}
           >
             Find the right plan
           </h1>
@@ -350,7 +349,6 @@ export default function PricingPage() {
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 
             className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white"
-            style={{ textShadow: '0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.3)' }}
           >
             Let's Simplify Your Finances
           </h2>

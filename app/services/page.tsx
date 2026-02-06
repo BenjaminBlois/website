@@ -14,7 +14,6 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 
             className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6"
-            style={{ textShadow: '0 0 30px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.2)' }}
           >
             How Can We Help You?
           </h1>
@@ -112,7 +111,6 @@ export default function ServicesPage() {
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 
             className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white"
-            style={{ textShadow: '0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.3)' }}
           >
             Not Sure Where to Start?
           </h2>
