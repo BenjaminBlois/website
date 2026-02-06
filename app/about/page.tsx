@@ -122,22 +122,54 @@ export default function AboutPage() {
       </section>
 
       {/* Our Core Principles */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#313d46] mb-10 text-center">
-            Our Core Principles
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {principles.map((principle, index) => (
-              <div key={index} className="bg-white rounded-xl p-5 shadow-sm flex flex-col h-full">
-                <div className="w-12 h-12 bg-[#1A3B5D] text-white rounded-full flex items-center justify-center mb-3 flex-shrink-0">
+      <section className="py-12 md:py-16 lg:py-20 bg-white px-4 sm:px-8 lg:px-16">
+        <h2
+          className="text-center font-semibold text-[#313d46] mb-12"
+          style={{
+            fontSize: 'clamp(1.75rem, 4vw, 3rem)',
+            fontWeight: 600,
+            letterSpacing: '-0.02em',
+            lineHeight: '1.1',
+          }}
+        >
+          Our Core Principles
+        </h2>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {principles.map((principle, index) => {
+            const gradients = [
+              'linear-gradient(48deg, #1A3B5D 0%, #2AA198 100%)',
+              'linear-gradient(48deg, #2AA198 0%, #1A3B5D 100%)',
+              'linear-gradient(48deg, #1A3B5D 0%, #35b8ad 100%)',
+              'linear-gradient(48deg, #1e4d6b 0%, #2AA198 100%)',
+            ];
+            return (
+              <div
+                key={index}
+                className="relative overflow-hidden flex flex-col items-center text-center"
+                style={{
+                  background: gradients[index],
+                  borderRadius: '30px',
+                  padding: '48px 32px',
+                }}
+              >
+                <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-white mb-5">
                   {renderIcon(principle.icon)}
                 </div>
-                <h3 className="text-base font-semibold text-[#313d46] mb-2">{principle.title}</h3>
-                <p className="text-[#393f41] text-xs leading-relaxed">{principle.description}</p>
+                <h3
+                  className="mb-3 text-xl sm:text-2xl font-semibold text-white"
+                  style={{ letterSpacing: '-0.02em', lineHeight: '1.2', fontWeight: 600 }}
+                >
+                  {principle.title}
+                </h3>
+                <p
+                  className="text-sm sm:text-base text-white max-w-sm"
+                  style={{ lineHeight: '1.6', opacity: 0.95 }}
+                >
+                  {principle.description}
+                </p>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </section>
 
