@@ -47,16 +47,6 @@ export default function Footer() {
                   Business Services
                 </Link>
               </li>
-              <li>
-                <Link href="/services/business#bookkeeping" className={linkStyle}>
-                  Bookkeeping
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/business#cfo" className={linkStyle}>
-                  Fractional CFO
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -67,11 +57,6 @@ export default function Footer() {
               <li>
                 <Link href="/about" className={linkStyle}>
                   About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/about#how-we-work" className={linkStyle}>
-                  How We Work
                 </Link>
               </li>
               <li>
