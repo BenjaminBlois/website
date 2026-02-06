@@ -91,7 +91,7 @@ export default function BuiltForYourBusiness() {
                 padding: '0 1rem'
               }}
             >
-              Built for Your Business
+              Services
             </h2>
           </div>
 
