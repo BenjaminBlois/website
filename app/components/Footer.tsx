@@ -12,8 +12,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo and Badges */}
           <div className="flex flex-col gap-4">
-            <Link href="/" className="no-underline mb-4">
-              <img src="/logo.png" alt="Numeriq" className="h-8 w-auto brightness-0 invert" />
+            <Link href="/" className="no-underline mb-4" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: '1.5rem', color: '#ffffff', textDecoration: 'none' }}>
+              numeriq
             </Link>
             <div className="flex gap-4">
               <Image

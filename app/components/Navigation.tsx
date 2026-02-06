@@ -11,8 +11,8 @@ export default function Navigation() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="no-underline">
-            <img src="/logo.png" alt="Numeriq" className="h-8 md:h-10 w-auto" />
+          <Link href="/" className="no-underline" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: '1.5rem', color: '#000000', textDecoration: 'none' }}>
+            numeriq
           </Link>
 
           {/* Desktop Navigation */}

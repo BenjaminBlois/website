@@ -5,11 +5,11 @@ export default function IndustriesPreview() {
     { name: 'Service-based businesses', icon: 'handshake' },
     { name: 'Ecommerce & online brands', icon: 'cart' },
     { name: 'Agencies & consultants', icon: 'chat' },
-    { name: 'Construction & trade', icon: 'tools' },
+    { name: 'Construction & trade businesses', icon: 'tools' },
     { name: 'Product-based businesses', icon: 'package' },
-    { name: 'Startups & high-growth', icon: 'rocket' },
+    { name: 'Startups & high-growth companies', icon: 'rocket' },
     { name: 'Owner-operated businesses', icon: 'person' },
-    { name: 'Multi-entity companies', icon: 'buildings' },
+    { name: 'Multi-entity & complex companies', icon: 'buildings' },
   ];
 
   const renderIcon = (icon: string) => {

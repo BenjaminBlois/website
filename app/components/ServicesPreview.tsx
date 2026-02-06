@@ -70,9 +70,6 @@ export default function ServicesPreview() {
             >
               Why People Choose Numeriq
             </h2>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              Numeriq Tax and Accounting provides comprehensive bookkeeping and controller services and a network of fractional CFOs.
-            </p>
           </div>
 
           {/* Vertical Stack */}

@@ -10,7 +10,7 @@ export default function Hero() {
           {/* Text Content */}
           <div className="flex-1 w-full lg:w-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-[#313d46] mb-6 leading-tight">
-              Tax and Accounting Made Simple
+              Tax and Accounting made Simple
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-[#393f41] mb-8 leading-relaxed">
               Tax preparation and accounting services for individuals and businesses who want clarity, accuracy, and maximize peace of mind.
