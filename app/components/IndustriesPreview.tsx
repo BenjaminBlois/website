@@ -76,37 +76,23 @@ export default function IndustriesPreview() {
           Business Types We Serve
         </h2>
         
-        {/* Horizontal Scroller */}
-        <div className="relative">
-          <div className="overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide">
-            <div className="flex gap-4 md:gap-6" style={{ minWidth: 'max-content' }}>
-              {businessTypes.map((type, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center gap-3 bg-gray-50 rounded-xl p-6 min-w-[160px] md:min-w-[180px] hover:bg-gray-100 transition-colors"
-                >
-                  <div className="w-16 h-16 bg-[#1A3B5D] text-white rounded-full flex items-center justify-center">
-                    {renderIcon(type.icon)}
-                  </div>
-                  <span className="text-sm md:text-base font-medium text-[#313d46] text-center">
-                    {type.name}
-                  </span>
-                </div>
-              ))}
+        {/* Two Row Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
+          {businessTypes.map((type, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center gap-3 bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors"
+            >
+              <div className="w-16 h-16 bg-[#1A3B5D] text-white rounded-full flex items-center justify-center">
+                {renderIcon(type.icon)}
+              </div>
+              <span className="text-sm md:text-base font-medium text-[#313d46] text-center">
+                {type.name}
+              </span>
             </div>
-          </div>
+          ))}
         </div>
       </div>
-      
-      <style jsx>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
     </section>
   );
 }
