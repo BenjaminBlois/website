@@ -69,7 +69,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="text-white">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
-                Built on Accuracy, Transparency, and Trust.
+                Built on Accuracy, Transparency, and trust.
               </h1>
               <p className="text-lg md:text-xl text-white/90">
                 Numeriq was founded to give individuals and businesses clear, reliable financial support-without the confusion, stress, or surprise costs.
