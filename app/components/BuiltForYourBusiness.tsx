@@ -1,201 +1,152 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import Image from 'next/image';
 
-interface TabContent {
-  id: string;
-  label: string;
+interface ServiceCard {
   title: string;
   description: string;
-  mediaType: 'video' | 'image';
-  mediaSrc: string;
-  iconSrc: string;
+  gradient: string;
+  icon: string;
 }
 
-const tabs: TabContent[] = [
+const services: ServiceCard[] = [
   {
-    id: 'bookkeeping',
-    label: 'Bookkeeping',
     title: 'Bookkeeping',
-    description: 'We handle your day-to-day bookkeeping and monthly close so your financials are accurate, organized, and always up to date - giving you clear visibility into your business at any time.',
-    mediaType: 'image',
-    mediaSrc: '/Accounting.png',
-    iconSrc: '/bookkeeping-icon.png',
+    description: 'We handle your day-to-day bookkeeping and monthly close so your financials are accurate, organized, and always up to date — giving you clear visibility into your business at any time.',
+    gradient: 'linear-gradient(48deg, #1A3B5D 0%, #2AA198 100%)',
+    icon: 'calculator',
   },
   {
-    id: 'tax-prep',
-    label: 'Individual/Business Tax Prep',
     title: 'Individual/Business Tax Prep',
     description: 'Comprehensive tax preparation for individuals and businesses, ensuring returns are accurate, compliant, and optimized to reduce surprises and allows you to sit back stress-free.',
-    mediaType: 'image',
-    mediaSrc: '/Accounting.png',
-    iconSrc: '/tax-icon.png',
+    gradient: 'linear-gradient(48deg, #2AA198 0%, #1A3B5D 100%)',
+    icon: 'document',
   },
   {
-    id: 'cfo',
-    label: 'Fractional CFO',
     title: 'Fractional CFO',
-    description: 'High-level financial leadership to help you plan for growth, manage cash flow, and make strategic decisions - without the cost of a full-time CFO.',
-    mediaType: 'image',
-    mediaSrc: '/Accounting.png',
-    iconSrc: '/cfo-icon.png',
+    description: 'High-level financial leadership to help you plan for growth, manage cash flow, and make strategic decisions — without the cost of a full-time CFO.',
+    gradient: 'linear-gradient(48deg, #1A3B5D 0%, #35b8ad 100%)',
+    icon: 'chart',
   },
   {
-    id: 'financial-analysis',
-    label: 'Financial Analysis & Strategy',
     title: 'Financial Analysis & Strategy',
     description: 'In-depth financial analysis, forecasting, and strategic planning that turns your numbers into clear insights you can use to drive smarter decisions.',
-    mediaType: 'image',
-    mediaSrc: '/Accounting.png',
-    iconSrc: '/financial-analysis-icon.png',
+    gradient: 'linear-gradient(48deg, #1e4d6b 0%, #2AA198 100%)',
+    icon: 'magnify',
   },
   {
-    id: 'entity-setup',
-    label: 'Entity Set Up',
     title: 'Entity Set Up',
     description: 'Guidance and execution for selecting and setting up the right business entity, structured correctly from the start to support compliance, tax efficiency, and long-term goals.',
-    mediaType: 'image',
-    mediaSrc: '/Accounting.png',
-    iconSrc: '/entity-icon.png',
+    gradient: 'linear-gradient(48deg, #2AA198 0%, #1e4d6b 100%)',
+    icon: 'building',
   },
 ];
 
-export default function BuiltForYourBusiness() {
-  const [activeTab, setActiveTab] = useState('bookkeeping');
+function renderIcon(icon: string) {
+  switch (icon) {
+    case 'calculator':
+      return (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+        </svg>
+      );
+    case 'document':
+      return (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      );
+    case 'chart':
+      return (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+      );
+    case 'magnify':
+      return (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      );
+    case 'building':
+      return (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
+function ServiceCardComponent({ service, index }: { service: ServiceCard; index: number }) {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
   return (
-    <section 
-      ref={ref} 
-      className="relative w-full py-12 sm:py-16 lg:py-20 bg-white"
-      style={{ overflowX: 'hidden' }}
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className="w-full relative overflow-hidden"
+      style={{
+        background: service.gradient,
+        borderRadius: '40px',
+        padding: '60px 48px',
+      }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ overflowX: 'hidden', width: '100%' }}>
-        <div className="flex flex-col gap-8 sm:gap-12" style={{ width: '100%', maxWidth: '100%' }}>
-          {/* Heading */}
-          <div className="flex justify-center w-full">
-            <h2 
-              className="my-0 text-center font-semibold text-[#313d46] w-full"
-              style={{
-                fontSize: 'clamp(2rem, 5vw, 4.5rem)',
-                fontWeight: 600,
-                letterSpacing: '-0.88px',
-                lineHeight: '1',
-                maxWidth: '100%',
-                padding: '0 1rem'
-              }}
-            >
-              Services
-            </h2>
+      <div className="max-w-4xl mx-auto">
+        <div className="flex flex-col items-center text-center">
+          <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-white mb-6">
+            {renderIcon(service.icon)}
           </div>
-
-          {/* Tab Buttons Container */}
-          <div className="flex justify-center pb-6 sm:pb-8 w-full" style={{ overflowX: 'hidden' }}>
-            <div 
-              className="flex bg-white rounded-[5.6rem] w-full justify-between p-[0.8rem] gap-1 sm:gap-2 flex-wrap sm:flex-nowrap border border-gray-200"
-              style={{ 
-                maxWidth: '100%',
-                boxSizing: 'border-box'
-              }}
-            >
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`relative flex flex-col items-center justify-center gap-2 rounded-[40px] border-none px-2 sm:px-3 md:px-4 py-3 font-medium cursor-pointer min-h-[60px] flex-1 text-[10px] xs:text-xs sm:text-sm transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? 'bg-[#1A3B5D] text-white hover:bg-[#0f2a3f] active:bg-[#0a1f2e]'
-                      : 'bg-white text-[#313d46] hover:bg-gray-100 active:bg-gray-200'
-                  }`}
-                  style={{
-                    transition: 'color 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                    minWidth: 0,
-                    flexBasis: 0,
-                    flexGrow: 1
-                  }}
-                >
-                  <span>{tab.label}</span>
-                  <Image
-                    src={tab.iconSrc}
-                    alt=""
-                    width={24}
-                    height={24}
-                    className="w-6 h-6 flex-shrink-0"
-                    style={{ filter: activeTab === tab.id ? 'invert(1) brightness(2)' : 'none' }}
-                  />
-                </button>
-              ))}
-            </div>
-          </div>
+          <h2
+            className="mb-4 text-2xl sm:text-3xl lg:text-4xl font-semibold text-white"
+            style={{
+              letterSpacing: '-0.02em',
+              lineHeight: '1.2',
+              fontWeight: 600,
+            }}
+          >
+            {service.title}
+          </h2>
+          <p
+            className="text-base sm:text-lg lg:text-xl text-white max-w-2xl"
+            style={{
+              lineHeight: '1.6',
+              opacity: 0.95,
+            }}
+          >
+            {service.description}
+          </p>
         </div>
+      </div>
+    </motion.div>
+  );
+}
 
-        {/* Content - Show only active tab */}
-        <div className="w-full mt-6 sm:mt-8" style={{ overflowX: 'hidden', width: '100%', maxWidth: '100%' }}>
-          <AnimatePresence mode="wait">
-            {tabs.map((tab) => {
-              if (tab.id !== activeTab) return null;
-              
-              return (
-                <motion.div
-                  key={tab.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="w-full"
-                  style={{ width: '100%', maxWidth: '100%', overflowX: 'hidden' }}
-                >
-                  <div className="w-full mx-auto h-full flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10 items-center pb-4" style={{ width: '100%', maxWidth: '100%', paddingLeft: '0.5rem', paddingRight: '0.5rem' }}>
-                    {/* Description */}
-                    {tab.description && (
-                      <div className="w-full max-w-3xl text-center">
-                        <p className="text-base md:text-lg text-[#393f41] leading-relaxed">
-                          {tab.description}
-                        </p>
-                      </div>
-                    )}
-                    {/* Image/Video */}
-                    <div className="w-full overflow-hidden" style={{ aspectRatio: '16/9', maxWidth: '90%', borderRadius: '20px' }}>
-                      {tab.mediaType === 'video' ? (
-                        <video
-                          aria-label={tab.title}
-                          playsInline
-                          loop
-                          autoPlay
-                          preload="none"
-                          muted
-                          className="w-full h-full object-cover"
-                          style={{ borderRadius: '20px', width: '100%', height: '100%' }}
-                        >
-                          <source src={tab.mediaSrc} type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
-                      ) : (
-                        <div className="overflow-hidden w-full h-full" style={{ borderRadius: '20px', width: '100%', height: '100%' }}>
-                          <Image
-                            src={tab.mediaSrc}
-                            alt={tab.title}
-                            width={880}
-                            height={600}
-                            className="w-full h-full object-cover"
-                            priority
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                          />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </AnimatePresence>
-        </div>
+export default function BuiltForYourBusiness() {
+  return (
+    <section className="w-full bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-16">
+      <h2
+        className="text-center font-semibold text-[#313d46] mb-12"
+        style={{
+          fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+          fontWeight: 600,
+          letterSpacing: '-0.02em',
+          lineHeight: '1.1',
+        }}
+      >
+        Services
+      </h2>
+      <div className="max-w-5xl mx-auto flex flex-col gap-10">
+        {services.map((service, index) => (
+          <ServiceCardComponent key={index} service={service} index={index} />
+        ))}
       </div>
     </section>
   );
