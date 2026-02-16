@@ -54,7 +54,7 @@ export default function HowWeWork() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left side - Steps */}
             <div className="flex flex-col min-h-0">
               <motion.h2
@@ -90,13 +90,13 @@ export default function HowWeWork() {
               </div>
             </div>
 
-            {/* Right side - 16:9 image */}
+            {/* Right side - 16:10.8 image (16:9 + 20% vertical) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative w-full"
+              className="relative w-full flex items-center justify-center"
             >
               <div
                 className="relative w-full rounded-[24px] overflow-hidden shadow-2xl border border-white/40"
@@ -104,7 +104,7 @@ export default function HowWeWork() {
                   background: 'rgba(255,255,255,0.3)',
                   backdropFilter: 'blur(8px)',
                   padding: '10px',
-                  aspectRatio: '16/9',
+                  aspectRatio: '16/10.8',
                 }}
               >
                 <Image
