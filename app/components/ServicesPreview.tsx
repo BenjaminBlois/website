@@ -1,5 +1,24 @@
 'use client';
 
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
+function AnimatedCard({ children, index, className, style }: { children: React.ReactNode; index: number; className?: string; style?: React.CSSProperties }) {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 24 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+      transition={{ duration: 0.5, delay: index * 0.12, ease: 'easeOut' }}
+      className={className}
+      style={style}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 export default function ServicesPreview() {
   const services = [
     {
@@ -55,38 +74,67 @@ export default function ServicesPreview() {
     }
   };
 
+  const iconColors = ['#306BAC', '#6F9CEE', '#918EF4', '#141B41'];
+
   return (
-    <section className="py-12 md:py-16 lg:py-20" style={{ background: 'linear-gradient(135deg, #E3EAF8 0%, #D5DEFA 50%, #E8EDFC 100%)' }}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+    <section className="py-16 md:py-20 lg:py-28 relative overflow-hidden">
+      {/* Rich radial gradient background */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(ellipse at 20% 20%, rgba(152,185,242,0.3) 0%, transparent 50%), radial-gradient(ellipse at 80% 80%, rgba(145,142,244,0.2) 0%, transparent 50%), radial-gradient(ellipse at 50% 50%, rgba(48,107,172,0.08) 0%, transparent 70%), linear-gradient(180deg, #EDF1FB 0%, #E0E8F9 100%)',
+        }}
+      />
+      {/* Noise texture overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+          backgroundSize: '128px 128px',
+        }}
+      />
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
-            <h2 
-              className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-4"
-            >
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-14"
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41]">
               Why People Choose Numeriq
             </h2>
-          </div>
+          </motion.div>
 
-          {/* Vertical Stack */}
-          <div className="space-y-4">
+          {/* Bento Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {services.map((service, index) => (
-              <div 
-                key={index} 
-                className="bg-white rounded-xl p-6 md:p-8 flex items-start gap-5 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+              <AnimatedCard
+                key={index}
+                index={index}
+                className={`group relative rounded-[20px] p-7 md:p-9 backdrop-blur-md border border-white/60 shadow-sm hover:shadow-lg transition-all duration-300 ${
+                  index === 0 ? 'md:row-span-2' : ''
+                }`}
+                style={{
+                  background: 'rgba(255,255,255,0.55)',
+                }}
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-[#306BAC] rounded-full flex items-center justify-center text-white">
+                <div
+                  className="w-11 h-11 rounded-xl flex items-center justify-center text-white mb-5"
+                  style={{ backgroundColor: iconColors[index] }}
+                >
                   {renderIcon(service.icon)}
                 </div>
-                <div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-[#141B41] mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-[#141B41]/65 text-base md:text-lg leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
+                <h3 className="text-lg md:text-xl font-semibold text-[#141B41] mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-[#141B41]/60 text-base leading-relaxed">
+                  {service.description}
+                </p>
+              </AnimatedCard>
             ))}
           </div>
         </div>
