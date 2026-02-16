@@ -63,7 +63,7 @@ export default function PricingPage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative bg-white pt-16 md:pt-20 lg:pt-24 pb-6 md:pb-8 lg:pb-10">
+      <section className="relative bg-white pt-16 md:pt-20 lg:pt-24 pb-3 md:pb-4 lg:pb-5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#141B41] mb-4">
             Fixed Pricing. Tailored for You.

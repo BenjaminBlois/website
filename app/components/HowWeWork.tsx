@@ -54,9 +54,9 @@ export default function HowWeWork() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
             {/* Left side - Steps */}
-            <div>
+            <div className="flex flex-col min-h-0">
               <motion.h2
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -90,28 +90,29 @@ export default function HowWeWork() {
               </div>
             </div>
 
-            {/* Right side - Image with glassmorphism frame */}
+            {/* Right side - 16:9 image spanning section vertically */}
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
+              className="relative w-full"
             >
               <div
-                className="rounded-[24px] overflow-hidden shadow-2xl border border-white/40"
+                className="relative w-full rounded-[24px] overflow-hidden shadow-2xl border border-white/40"
                 style={{
                   background: 'rgba(255,255,255,0.3)',
                   backdropFilter: 'blur(8px)',
                   padding: '10px',
+                  aspectRatio: '16/9',
                 }}
               >
                 <Image
                   src="/how-it-works.png"
                   alt="Team consulting with clients"
-                  width={800}
-                  height={450}
-                  className="w-full aspect-video object-cover rounded-[16px]"
+                  fill
+                  className="object-cover rounded-[16px]"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
             </motion.div>
