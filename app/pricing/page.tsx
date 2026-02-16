@@ -56,6 +56,8 @@ const services: ServicePricing[] = [
   },
 ];
 
+const cardColors = ['#98B9F2', '#6F9CEE', '#918EF4', '#306BAC', '#141B41'];
+
 export default function PricingPage() {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -77,7 +79,7 @@ export default function PricingPage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative bg-white pt-16 md:pt-20 lg:pt-24 pb-3 md:pb-4 lg:pb-5">
+      <section className="relative bg-white pt-16 md:pt-20 lg:pt-24 pb-0">
         <AnimatedSection>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#141B41] mb-4">
@@ -106,7 +108,7 @@ export default function PricingPage() {
             </button>
             <div
               ref={sliderRef}
-              className="flex gap-6 overflow-x-auto overflow-y-hidden py-2 scroll-smooth min-h-[280px] flex-1 max-w-[calc(300px*3+24*2)]"
+              className="flex gap-6 overflow-x-auto overflow-y-hidden py-2 scroll-smooth flex-1 max-w-[calc(280px*3+24*2)]"
               style={{ scrollbarWidth: 'thin' }}
             >
               {services.map((service, index) => (
@@ -115,16 +117,20 @@ export default function PricingPage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                   transition={{ duration: 0.6, delay: index * 0.05 }}
-                  className="pricing-card flex-shrink-0 w-[calc(100%-2rem)] sm:w-[280px] md:w-[300px] bg-white rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col h-full transition-all duration-300 hover:shadow-xl"
+                  className="pricing-card flex-shrink-0 w-[280px] min-w-[280px] min-h-[320px] flex flex-col rounded-[40px] shadow-md transition-all duration-300 hover:shadow-xl"
+                  style={{
+                    backgroundColor: cardColors[index],
+                    padding: '48px 32px',
+                  }}
                 >
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#141B41] mb-3 leading-tight">
+                  <h3 className="text-xl font-bold text-white mb-3 leading-tight" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.15)' }}>
                     {service.name}
                   </h3>
-                  <p className="text-sm sm:text-base text-[#141B41]/65 mb-6 leading-relaxed flex-grow">
+                  <p className="text-sm text-white/95 leading-relaxed flex-grow mb-6" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.1)' }}>
                     {service.description}
                   </p>
                   <div>
-                    <span className="inline-block bg-[#306BAC]/10 text-[#306BAC] px-4 py-1.5 rounded-full text-sm font-semibold">
+                    <span className="inline-block bg-white/25 text-white px-4 py-1.5 rounded-full text-sm font-semibold">
                       {service.pricing}
                     </span>
                   </div>
