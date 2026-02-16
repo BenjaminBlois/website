@@ -144,59 +144,56 @@ export default function IndividualServicesPage() {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-12 md:py-16 lg:py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8">
-              How It Works
-            </h2>
-            <div className="space-y-6">
-              {steps.map((step) => (
-                <div key={step.number} className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-[#306BAC] text-white rounded-full flex items-center justify-center font-semibold text-lg">
-                    {step.number}
+      {/* Smooth gradient wrapper: last section + CTA + Footer */}
+      <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #e8eefc 10%, #98B9F2 25%, #6F9CEE 40%, #306BAC 60%, #1E2F6A 80%, #141B41 95%)' }}>
+        {/* How It Works */}
+        <section className="py-12 md:py-16 lg:py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8">
+                How It Works
+              </h2>
+              <div className="space-y-6">
+                {steps.map((step) => (
+                  <div key={step.number} className="flex gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-white/20 text-white rounded-full flex items-center justify-center font-semibold text-lg border border-white/30">
+                      {step.number}
+                    </div>
+                    <div>
+                      <h3 className="text-lg md:text-xl font-semibold text-[#141B41] mb-1">
+                        {step.title}
+                      </h3>
+                      <p className="text-[#141B41]/65">
+                        {step.description}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg md:text-xl font-semibold text-[#141B41] mb-1">
-                      {step.title}
-                    </h3>
-                    <p className="text-[#141B41]/65">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden">
-        <div
-          className="absolute inset-0"
-          style={{ background: 'linear-gradient(to bottom, rgba(152,185,242,0.15) 0%, #306BAC 30%, #1E2F6A 65%, #141B41 100%)' }}
-        ></div>
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 
-            className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white"
-          >
-            Let&apos;s Simplify Your Taxes
-          </h2>
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Get the guidance you need to keep your finances organized, accurate, and stress-free.
-          </p>
-          <button
-            onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-            className="inline-flex items-center justify-center gap-2 bg-white text-[#141B41] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
-          >
-            Book a Call
-          </button>
-        </div>
-      </section>
+        {/* CTA Section */}
+        <section className="py-16 md:py-20 lg:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white">
+              Let&apos;s Simplify Your Taxes
+            </h2>
+            <p className="text-lg md:text-xl text-white/85 mb-8 max-w-2xl mx-auto">
+              Get the guidance you need to keep your finances organized, accurate, and stress-free.
+            </p>
+            <button
+              onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
+              className="inline-flex items-center justify-center gap-2 bg-white text-[#141B41] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-white/90 transition-colors cursor-pointer"
+            >
+              Book a Call
+            </button>
+          </div>
+        </section>
 
-      <Footer />
+        <Footer />
+      </div>
     </main>
   );
 }

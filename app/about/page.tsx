@@ -173,48 +173,45 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Who We Serve */}
-      <section className="py-12 md:py-16 lg:py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">
-              Who We Serve
-            </h2>
-            <p className="text-lg text-[#141B41]/65 mb-4">
-              We work with individuals, owner-operated businesses, and growing companies across a wide range of industries.
-            </p>
-            <p className="text-lg text-[#141B41]/65">
-              From simple personal tax returns to multi-entity businesses, our approach adapts to your needs while maintaining the same standard of accuracy and care.
-            </p>
+      {/* Smooth gradient wrapper: last section + CTA + Footer */}
+      <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #e8eefc 10%, #98B9F2 25%, #6F9CEE 40%, #306BAC 60%, #1E2F6A 80%, #141B41 95%)' }}>
+        {/* Who We Serve */}
+        <section className="py-12 md:py-16 lg:py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">
+                Who We Serve
+              </h2>
+              <p className="text-lg text-[#141B41]/65 mb-4">
+                We work with individuals, owner-operated businesses, and growing companies across a wide range of industries.
+              </p>
+              <p className="text-lg text-[#141B41]/65">
+                From simple personal tax returns to multi-entity businesses, our approach adapts to your needs while maintaining the same standard of accuracy and care.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden">
-        <div
-          className="absolute inset-0"
-          style={{ background: 'linear-gradient(to bottom, rgba(152,185,242,0.15) 0%, #306BAC 30%, #1E2F6A 65%, #141B41 100%)' }}
-        ></div>
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 
-            className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white"
-          >
-            Let&apos;s Simplify Your Finances
-          </h2>
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Get the guidance you need to keep your finances organized, accurate, and stress-free.
-          </p>
-          <button
-            onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-            className="inline-flex items-center justify-center gap-2 bg-white text-[#141B41] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
-          >
-            Book a Call
-          </button>
-        </div>
-      </section>
+        {/* CTA Section */}
+        <section className="py-16 md:py-20 lg:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white">
+              Let&apos;s Simplify Your Finances
+            </h2>
+            <p className="text-lg md:text-xl text-white/85 mb-8 max-w-2xl mx-auto">
+              Get the guidance you need to keep your finances organized, accurate, and stress-free.
+            </p>
+            <button
+              onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
+              className="inline-flex items-center justify-center gap-2 bg-white text-[#141B41] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-white/90 transition-colors cursor-pointer"
+            >
+              Book a Call
+            </button>
+          </div>
+        </section>
 
-      <Footer />
+        <Footer />
+      </div>
     </main>
   );
 }
