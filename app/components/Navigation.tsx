@@ -18,7 +18,7 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             <div className="relative group">
-              <Link href="/services" className="text-black font-semibold transition-opacity hover:opacity-70 text-sm xl:text-base flex items-center gap-1 no-underline">
+              <Link href="/services" className="font-semibold transition-opacity hover:opacity-70 text-sm xl:text-base flex items-center gap-1 no-underline" style={{ color: '#000000' }}>
                 Services
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -34,13 +34,13 @@ export default function Navigation() {
                 </Link>
               </div>
             </div>
-            <Link href="/about" className="text-black font-semibold transition-opacity hover:opacity-70 text-sm xl:text-base no-underline">
+            <Link href="/about" className="font-semibold transition-opacity hover:opacity-70 text-sm xl:text-base no-underline" style={{ color: '#000000' }}>
               About
             </Link>
-            <Link href="/pricing" className="text-black font-semibold transition-opacity hover:opacity-70 text-sm xl:text-base no-underline">
+            <Link href="/pricing" className="font-semibold transition-opacity hover:opacity-70 text-sm xl:text-base no-underline" style={{ color: '#000000' }}>
               Pricing
             </Link>
-            <Link href="/login" className="text-black font-semibold transition-opacity hover:opacity-70 text-sm xl:text-base no-underline">
+            <Link href="/login" className="font-semibold transition-opacity hover:opacity-70 text-sm xl:text-base no-underline" style={{ color: '#000000' }}>
               Sign In
             </Link>
             <button
