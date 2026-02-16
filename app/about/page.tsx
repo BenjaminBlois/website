@@ -3,6 +3,22 @@
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
+function AnimatedSection({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.08 });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 28 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+      transition={{ duration: 0.55, delay, ease: 'easeOut' }}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 export default function AboutPage() {
   const principles = [
@@ -65,35 +81,38 @@ export default function AboutPage() {
       
       {/* Hero Section */}
       <section className="relative bg-white py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-[#141B41]">
-                Built on Accuracy, Transparency, and Trust.
-              </h1>
-              <p className="text-lg md:text-xl text-[#141B41]/65">
-                Numeriq was founded to give individuals and businesses clear, reliable financial support-without the confusion, stress, or surprise costs.
-              </p>
-            </div>
-            <div className="relative">
-              <Image
-                src="/about-hero.png"
-                alt="Accountant working with client"
-                width={600}
-                height={450}
-                className="rounded-2xl shadow-2xl w-full h-auto"
-              />
+        <AnimatedSection>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-[#141B41]">
+                  Built on Accuracy, Transparency, and Trust.
+                </h1>
+                <p className="text-lg md:text-xl text-[#141B41]/65">
+                  Numeriq was founded to give individuals and businesses clear, reliable financial support-without the confusion, stress, or surprise costs.
+                </p>
+              </div>
+              <div className="relative">
+                <Image
+                  src="/about-hero.png"
+                  alt="Accountant working with client"
+                  width={600}
+                  height={450}
+                  className="rounded-2xl shadow-2xl w-full h-auto"
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Why We Started */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
-            <div className="relative">
-              <Image
+        <AnimatedSection>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+              <div className="relative">
+                <Image
                 src="/about-why-we-started.png"
                 alt="Reviewing financials on laptop"
                 width={500}
@@ -118,23 +137,25 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Our Core Principles */}
       <section className="py-12 md:py-16 lg:py-20 bg-white px-4 sm:px-8 lg:px-16">
-        <h2
-          className="text-center font-semibold text-[#141B41]"
-          style={{
-            fontSize: 'clamp(1.75rem, 4vw, 3rem)',
-            fontWeight: 600,
-            letterSpacing: '-0.02em',
-            lineHeight: '1.1',
-          }}
-        >
-          Our Core Principles
-        </h2>
-        <div style={{ height: '6rem', minHeight: '6rem' }} aria-hidden="true" />
+        <AnimatedSection>
+          <h2
+            className="text-center font-semibold text-[#141B41]"
+            style={{
+              fontSize: 'clamp(1.75rem, 4vw, 3rem)',
+              fontWeight: 600,
+              letterSpacing: '-0.02em',
+              lineHeight: '1.1',
+            }}
+          >
+            Our Core Principles
+          </h2>
+          <div style={{ height: '6rem', minHeight: '6rem' }} aria-hidden="true" />
+        </AnimatedSection>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {principles.map((principle, index) => {
             const cardColors = [
@@ -144,31 +165,7 @@ export default function AboutPage() {
               '#141B41',
             ];
             return (
-              <div
-                key={index}
-                className="relative overflow-hidden flex flex-col items-center text-center"
-                style={{
-                  background: cardColors[index],
-                  borderRadius: '30px',
-                  padding: '48px 32px',
-                }}
-              >
-                <div className="text-white mb-5">
-                  {renderIcon(principle.icon)}
-                </div>
-                <h3
-                  className="mb-3 text-xl sm:text-2xl font-semibold text-white"
-                  style={{ letterSpacing: '-0.02em', lineHeight: '1.2', fontWeight: 600 }}
-                >
-                  {principle.title}
-                </h3>
-                <p
-                  className="text-sm sm:text-base text-white max-w-sm"
-                  style={{ lineHeight: '1.6', opacity: 0.95 }}
-                >
-                  {principle.description}
-                </p>
-              </div>
+              <PrincipleCard key={index} index={index} cardColors={cardColors} principle={principle} renderIcon={renderIcon} />
             );
           })}
         </div>
@@ -176,41 +173,89 @@ export default function AboutPage() {
 
       {/* Who We Serve */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">
-              Who We Serve
-            </h2>
-            <p className="text-lg text-[#141B41]/65 mb-4">
-              We work with individuals, owner-operated businesses, and growing companies across a wide range of industries.
-            </p>
-            <p className="text-lg text-[#141B41]/65">
-              From simple personal tax returns to multi-entity businesses, our approach adapts to your needs while maintaining the same standard of accuracy and care.
-            </p>
+        <AnimatedSection>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">
+                Who We Serve
+              </h2>
+              <p className="text-lg text-[#141B41]/65 mb-4">
+                We work with individuals, owner-operated businesses, and growing companies across a wide range of industries.
+              </p>
+              <p className="text-lg text-[#141B41]/65">
+                From simple personal tax returns to multi-entity businesses, our approach adapts to your needs while maintaining the same standard of accuracy and care.
+              </p>
+            </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* CTA + Footer gradient wrapper */}
       <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #e8eefc 8%, #98B9F2 18%, #6F9CEE 30%, #306BAC 45%, #1E2F6A 60%, #141B41 75%)' }}>
         <section className="py-16 md:py-20 lg:py-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white">
-              Let&apos;s Simplify Your Finances
-            </h2>
-            <p className="text-lg md:text-xl text-white/85 mb-8 max-w-2xl mx-auto">
-              Get the guidance you need to keep your finances organized, accurate, and stress-free.
-            </p>
-            <button
-              onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-              className="inline-flex items-center justify-center gap-2 bg-white text-[#141B41] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-white/90 transition-colors cursor-pointer"
-            >
-              Book a Call
-            </button>
-          </div>
+          <AnimatedSection>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white">
+                Let&apos;s Simplify Your Finances
+              </h2>
+              <p className="text-lg md:text-xl text-white/85 mb-8 max-w-2xl mx-auto">
+                Get the guidance you need to keep your finances organized, accurate, and stress-free.
+              </p>
+              <button
+                onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#141B41] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-white/90 transition-colors cursor-pointer"
+              >
+                Book a Call
+              </button>
+            </div>
+          </AnimatedSection>
         </section>
         <Footer />
       </div>
     </main>
+  );
+}
+
+function PrincipleCard({
+  principle,
+  index,
+  cardColors,
+  renderIcon,
+}: {
+  principle: { title: string; description: string; icon: string };
+  index: number;
+  cardColors: string[];
+  renderIcon: (icon: string) => React.ReactNode;
+}) {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 28 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
+      className="relative overflow-hidden flex flex-col items-center text-center"
+      style={{
+        background: cardColors[index],
+        borderRadius: '30px',
+        padding: '48px 32px',
+      }}
+    >
+      <div className="text-white mb-5">
+        {renderIcon(principle.icon)}
+      </div>
+      <h3
+        className="mb-3 text-xl sm:text-2xl font-semibold text-white"
+        style={{ letterSpacing: '-0.02em', lineHeight: '1.2', fontWeight: 600 }}
+      >
+        {principle.title}
+      </h3>
+      <p
+        className="text-sm sm:text-base text-white max-w-sm"
+        style={{ lineHeight: '1.6', opacity: 0.95 }}
+      >
+        {principle.description}
+      </p>
+    </motion.div>
   );
 }

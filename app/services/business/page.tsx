@@ -4,6 +4,22 @@ import { useRef } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
+function AnimatedSection({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.08 });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 28 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+      transition={{ duration: 0.55, delay, ease: 'easeOut' }}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 export default function BusinessServicesPage() {
   const servicesScrollRef = useRef<HTMLDivElement>(null);
@@ -155,9 +171,10 @@ export default function BusinessServicesPage() {
       
       {/* Hero Section */}
       <section className="relative bg-white py-16 md:py-20 lg:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
+        <AnimatedSection>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#141B41] mb-6">
                 Accounting Built for Growing Businesses
               </h1>
@@ -180,15 +197,17 @@ export default function BusinessServicesPage() {
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
             </div>
+            </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Who We Work With */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-4">
+        <AnimatedSection>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-4">
               Who We Work With
             </h2>
             <p className="text-lg text-[#141B41]/65 mb-8">
@@ -214,8 +233,9 @@ export default function BusinessServicesPage() {
         className="py-12 md:py-16 lg:py-20"
         style={{ background: 'radial-gradient(circle 600px at 80% 30%, rgba(48,107,172,0.12) 0%, transparent 55%), radial-gradient(circle 500px at 20% 70%, rgba(152,185,242,0.15) 0%, transparent 55%), #F0F3FC' }}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-16 text-center">
+        <AnimatedSection>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-16 text-center">
             Our Business Services
           </h2>
           <div className="max-w-6xl mx-auto relative flex items-center gap-4">
@@ -257,15 +277,17 @@ export default function BusinessServicesPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
+            </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* How It Works */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41]">
+        <AnimatedSection>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41]">
               How It Works
             </h2>
             <div className="space-y-6" style={{ paddingTop: '2rem' }}>
@@ -287,12 +309,14 @@ export default function BusinessServicesPage() {
             </div>
           </div>
         </div>
+        </AnimatedSection>
       </section>
 
       {/* CTA + Footer gradient wrapper */}
       <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #e8eefc 8%, #98B9F2 18%, #6F9CEE 30%, #306BAC 45%, #1E2F6A 60%, #141B41 75%)' }}>
         <section className="py-16 md:py-20 lg:py-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <AnimatedSection>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white">
               Let&apos;s Simplify Your Finances
             </h2>
@@ -305,7 +329,8 @@ export default function BusinessServicesPage() {
             >
               Book a Call
             </button>
-          </div>
+            </div>
+          </AnimatedSection>
         </section>
         <Footer />
       </div>
