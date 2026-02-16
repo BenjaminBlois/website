@@ -23,7 +23,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/services/individual" className={linkStyle}>
-                  Personal Tax Services
+                  Individual Tax Services
                 </Link>
               </li>
               <li>
@@ -61,8 +61,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="tel:+1805630770" className={linkStyle}>
-                  805-630-770
+                <Link href="tel:+18056305770" className={linkStyle}>
+                  805-630-5770
                 </Link>
               </li>
               <li>
