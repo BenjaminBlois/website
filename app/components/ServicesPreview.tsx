@@ -78,19 +78,19 @@ export default function ServicesPreview() {
 
   return (
     <section className="py-16 md:py-20 lg:py-28 relative overflow-hidden">
-      {/* Rich radial gradient background */}
+      {/* Radial gradient background — visible color orbs */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse at 20% 20%, rgba(152,185,242,0.3) 0%, transparent 50%), radial-gradient(ellipse at 80% 80%, rgba(145,142,244,0.2) 0%, transparent 50%), radial-gradient(ellipse at 50% 50%, rgba(48,107,172,0.08) 0%, transparent 70%), linear-gradient(180deg, #EDF1FB 0%, #E0E8F9 100%)',
+          background: 'radial-gradient(circle 600px at 10% 20%, rgba(48,107,172,0.18) 0%, transparent 60%), radial-gradient(circle 500px at 90% 70%, rgba(145,142,244,0.16) 0%, transparent 55%), radial-gradient(circle 700px at 50% 100%, rgba(111,156,238,0.14) 0%, transparent 60%), #EDF1FB',
         }}
       />
-      {/* Noise texture overlay */}
+      {/* Noise grain texture */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.06] mix-blend-multiply"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-          backgroundSize: '128px 128px',
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+          backgroundSize: '256px 256px',
         }}
       />
 
@@ -109,17 +109,15 @@ export default function ServicesPreview() {
             </h2>
           </motion.div>
 
-          {/* Bento Grid */}
+          {/* Bento Grid — equal 2x2 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {services.map((service, index) => (
               <AnimatedCard
                 key={index}
                 index={index}
-                className={`group relative rounded-[20px] p-7 md:p-9 backdrop-blur-md border border-white/60 shadow-sm hover:shadow-lg transition-all duration-300 ${
-                  index === 0 ? 'md:row-span-2' : ''
-                }`}
+                className="group relative rounded-[20px] p-7 md:p-9 backdrop-blur-md border border-white/60 shadow-sm hover:shadow-lg transition-all duration-300"
                 style={{
-                  background: 'rgba(255,255,255,0.55)',
+                  background: 'rgba(255,255,255,0.5)',
                 }}
               >
                 <div

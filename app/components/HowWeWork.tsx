@@ -51,19 +51,19 @@ export default function HowWeWork() {
 
   return (
     <section className="py-16 md:py-20 lg:py-28 relative overflow-hidden">
-      {/* Radial gradient background */}
+      {/* Radial gradient background — visible color orbs */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse at 70% 30%, rgba(111,156,238,0.2) 0%, transparent 50%), radial-gradient(ellipse at 30% 70%, rgba(152,185,242,0.25) 0%, transparent 50%), linear-gradient(180deg, #F0F3FC 0%, #E6ECF9 100%)',
+          background: 'radial-gradient(circle 550px at 80% 20%, rgba(48,107,172,0.15) 0%, transparent 55%), radial-gradient(circle 600px at 15% 80%, rgba(152,185,242,0.2) 0%, transparent 55%), radial-gradient(circle 400px at 60% 60%, rgba(145,142,244,0.1) 0%, transparent 50%), #F0F3FC',
         }}
       />
-      {/* Noise texture */}
+      {/* Noise grain texture */}
       <div
-        className="absolute inset-0 opacity-[0.025]"
+        className="absolute inset-0 opacity-[0.06] mix-blend-multiply"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-          backgroundSize: '128px 128px',
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+          backgroundSize: '256px 256px',
         }}
       />
 
