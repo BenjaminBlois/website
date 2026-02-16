@@ -9,28 +9,19 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 py-12 md:py-16 lg:py-20">
           {/* Text Content */}
           <div className="flex-1 w-full lg:w-auto">
-            <h1
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-6 leading-tight"
-              style={{
-                background: 'linear-gradient(to right, #141B41, #306BAC, #6F9CEE, #918EF4)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-              }}
-            >
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-[#141B41] mb-6 leading-tight">
               Tax and Accounting made Simple
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl text-[#141B41]/70 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl lg:text-2xl text-[#141B41]/65 mb-8 leading-relaxed">
               Tax preparation and accounting services for individuals and businesses who want{' '}
-              <span className="font-bold" style={{ color: '#306BAC' }}>clarity</span>,{' '}
-              <span className="font-bold" style={{ color: '#6F9CEE' }}>accuracy</span>, and{' '}
-              <span className="font-bold" style={{ color: '#918EF4' }}>maximize</span>{' '}
+              <span className="font-bold text-[#306BAC]">clarity</span>,{' '}
+              <span className="font-bold text-[#306BAC]">accuracy</span>, and{' '}
+              <span className="font-bold text-[#306BAC]">maximize</span>{' '}
               peace of mind.
             </p>
             <button
               onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-              className="inline-flex items-center gap-2 text-white px-8 py-4 rounded-[30px] font-semibold text-lg hover:opacity-90 transition-opacity cursor-pointer no-underline"
-              style={{ background: 'linear-gradient(to right, #306BAC, #6F9CEE, #918EF4)' }}
+              className="inline-flex items-center gap-2 bg-[#306BAC] text-white px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-[#2759A0] transition-colors cursor-pointer no-underline"
             >
               Book a Call
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
