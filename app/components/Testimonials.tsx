@@ -34,10 +34,10 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gray-100">
+    <section className="py-12 md:py-16 lg:py-20 bg-[#98B9F2]/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#313d46] mb-4">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-4">
             What Our Clients Are Saying
           </h2>
         </div>
@@ -47,7 +47,7 @@ export default function Testimonials() {
             {/* Navigation Arrows */}
             <button
               onClick={prevTestimonial}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-[#1A3B5D] hover:text-[#0f2a3f] transition-colors"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-[#306BAC] hover:text-[#141B41] transition-colors"
               aria-label="Previous testimonial"
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ export default function Testimonials() {
             </button>
             <button
               onClick={nextTestimonial}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-[#1A3B5D] hover:text-[#0f2a3f] transition-colors"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-[#306BAC] hover:text-[#141B41] transition-colors"
               aria-label="Next testimonial"
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,7 +66,7 @@ export default function Testimonials() {
 
             {/* Testimonial Content */}
             <div className="px-12">
-              <p className="text-lg md:text-xl text-[#393f41] mb-6 leading-relaxed">
+              <p className="text-lg md:text-xl text-[#141B41]/80 mb-6 leading-relaxed">
                 &ldquo;{testimonials[currentIndex].quote}&rdquo;
               </p>
               <div className="flex items-center gap-4">
@@ -78,7 +78,7 @@ export default function Testimonials() {
                   ))}
                 </div>
                 <div>
-                  <p className="text-[#313d46] font-semibold text-lg">
+                  <p className="text-[#141B41] font-semibold text-lg">
                     {testimonials[currentIndex].author}
                   </p>
                   <div className="flex items-center gap-2 mt-1">
@@ -95,7 +95,7 @@ export default function Testimonials() {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentIndex ? 'bg-[#1A3B5D]' : 'bg-gray-300'
+                    index === currentIndex ? 'bg-[#306BAC]' : 'bg-[#98B9F2]'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />

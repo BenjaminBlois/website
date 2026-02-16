@@ -3,10 +3,13 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #313d46;
-  --primary: #1A3B5D;
-  --secondary: #2AA198;
-  --text-body: #393f41;
+  --foreground: #141B41;
+  --primary: #306BAC;
+  --secondary: #918EF4;
+  --accent: #6F9CEE;
+  --accent-light: #98B9F2;
+  --dark: #141B41;
+  --text-body: #141B41;
 }
 
 @theme inline {
@@ -14,6 +17,9 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-dark: var(--dark);
   --font-sans: 'Poppins', sans-serif;
 }
 
@@ -87,7 +93,7 @@ a {
 }
 
 a:hover {
-  color: var(--primary);
+  color: var(--dark);
 }
 
 button {

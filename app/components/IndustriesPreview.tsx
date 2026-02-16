@@ -72,25 +72,31 @@ export default function IndustriesPreview() {
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#313d46] mb-8 text-center">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8 text-center">
           Business Types We Serve
         </h2>
         
         {/* Two Row Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
-          {businessTypes.map((type, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center gap-3 bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors"
-            >
-              <div className="w-16 h-16 bg-[#1A3B5D] text-white rounded-full flex items-center justify-center">
-                {renderIcon(type.icon)}
+          {businessTypes.map((type, index) => {
+            const colors = ['#141B41', '#306BAC', '#6F9CEE', '#918EF4', '#306BAC', '#141B41', '#918EF4', '#6F9CEE'];
+            return (
+              <div
+                key={index}
+                className="flex flex-col items-center gap-3 bg-[#98B9F2]/8 rounded-xl p-6 hover:bg-[#98B9F2]/15 transition-colors"
+              >
+                <div
+                  className="w-16 h-16 text-white rounded-full flex items-center justify-center"
+                  style={{ backgroundColor: colors[index % colors.length] }}
+                >
+                  {renderIcon(type.icon)}
+                </div>
+                <span className="text-sm md:text-base font-medium text-[#141B41] text-center">
+                  {type.name}
+                </span>
               </div>
-              <span className="text-sm md:text-base font-medium text-[#313d46] text-center">
-                {type.name}
-              </span>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

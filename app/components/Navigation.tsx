@@ -18,7 +18,7 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             <div className="relative group">
-              <Link href="/services" className="text-[#313d46] hover:text-[#1A3B5D] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1 no-underline">
+              <Link href="/services" className="text-[#141B41] hover:text-[#306BAC] font-semibold transition-colors text-sm xl:text-base flex items-center gap-1 no-underline">
                 Services
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -26,26 +26,26 @@ export default function Navigation() {
               </Link>
               {/* Dropdown menu */}
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <Link href="/services/individual" className="block px-4 py-3 text-sm text-[#313d46] hover:bg-gray-50 hover:text-[#1A3B5D] no-underline rounded-t-lg">
+                <Link href="/services/individual" className="block px-4 py-3 text-sm text-[#141B41] hover:bg-[#98B9F2]/10 hover:text-[#306BAC] no-underline rounded-t-lg">
                   Personal
                 </Link>
-                <Link href="/services/business" className="block px-4 py-3 text-sm text-[#313d46] hover:bg-gray-50 hover:text-[#1A3B5D] no-underline rounded-b-lg">
+                <Link href="/services/business" className="block px-4 py-3 text-sm text-[#141B41] hover:bg-[#98B9F2]/10 hover:text-[#306BAC] no-underline rounded-b-lg">
                   Business
                 </Link>
               </div>
             </div>
-            <Link href="/about" className="text-[#313d46] hover:text-[#1A3B5D] font-semibold transition-colors text-sm xl:text-base no-underline">
+            <Link href="/about" className="text-[#141B41] hover:text-[#306BAC] font-semibold transition-colors text-sm xl:text-base no-underline">
               About
             </Link>
-            <Link href="/pricing" className="text-[#313d46] hover:text-[#1A3B5D] font-semibold transition-colors text-sm xl:text-base no-underline">
+            <Link href="/pricing" className="text-[#141B41] hover:text-[#306BAC] font-semibold transition-colors text-sm xl:text-base no-underline">
               Pricing
             </Link>
-            <Link href="/login" className="text-[#313d46] hover:text-[#1A3B5D] font-semibold transition-colors text-sm xl:text-base no-underline">
+            <Link href="/login" className="text-[#141B41] hover:text-[#306BAC] font-semibold transition-colors text-sm xl:text-base no-underline">
               Sign In
             </Link>
             <button
               onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-              className="bg-[#1A3B5D] text-white px-6 py-2.5 rounded-[30px] font-semibold hover:bg-[#0f2a3f] transition-colors text-sm xl:text-base cursor-pointer"
+              className="bg-[#306BAC] text-white px-6 py-2.5 rounded-[30px] font-semibold hover:bg-[#141B41] transition-colors text-sm xl:text-base cursor-pointer"
             >
               Book a Call
             </button>
@@ -77,25 +77,25 @@ export default function Navigation() {
           <div className="lg:hidden py-4 space-y-4">
             <div className="space-y-2">
               <p className="text-gray-500 text-sm font-semibold">Services</p>
-              <Link href="/services/individual" className="block pl-4 text-gray-700 hover:text-[#1A3B5D] font-semibold">
+              <Link href="/services/individual" className="block pl-4 text-gray-700 hover:text-[#306BAC] font-semibold">
                 Personal
               </Link>
-              <Link href="/services/business" className="block pl-4 text-gray-700 hover:text-[#1A3B5D] font-semibold">
+              <Link href="/services/business" className="block pl-4 text-gray-700 hover:text-[#306BAC] font-semibold">
                 Business
               </Link>
             </div>
-            <Link href="/about" className="block text-gray-700 hover:text-[#1A3B5D] font-semibold">
+            <Link href="/about" className="block text-gray-700 hover:text-[#306BAC] font-semibold">
               About
             </Link>
-            <Link href="/pricing" className="block text-gray-700 hover:text-[#1A3B5D] font-semibold">
+            <Link href="/pricing" className="block text-gray-700 hover:text-[#306BAC] font-semibold">
               Pricing
             </Link>
-            <Link href="/login" className="block text-gray-700 hover:text-[#1A3B5D] font-semibold">
+            <Link href="/login" className="block text-gray-700 hover:text-[#306BAC] font-semibold">
               Sign In
             </Link>
             <button
               onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-              className="w-full bg-[#1A3B5D] text-white px-6 py-2.5 rounded-[30px] font-semibold hover:bg-[#0f2a3f] transition-colors cursor-pointer"
+              className="w-full bg-[#306BAC] text-white px-6 py-2.5 rounded-[30px] font-semibold hover:bg-[#141B41] transition-colors cursor-pointer"
             >
               Book a Call
             </button>

@@ -32,26 +32,26 @@ export default function HowWeWork() {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
+    <section className="py-12 md:py-16 lg:py-20 bg-[#98B9F2]/8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left side - Steps */}
             <div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#313d46] mb-8">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8">
                 How It Works
               </h2>
               <div className="space-y-6">
                 {steps.map((step) => (
                   <div key={step.number} className="flex gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 bg-[#1A3B5D] text-white rounded-full flex items-center justify-center font-semibold text-lg">
+                    <div className="flex-shrink-0 w-10 h-10 bg-[#306BAC] text-white rounded-full flex items-center justify-center font-semibold text-lg">
                       {step.number}
                     </div>
                     <div>
-                      <h3 className="text-base md:text-lg font-semibold text-[#313d46] mb-1">
+                      <h3 className="text-base md:text-lg font-semibold text-[#141B41] mb-1">
                         {step.title}
                       </h3>
-                      <p className="text-[#393f41] text-sm md:text-base">
+                      <p className="text-[#141B41]/70 text-sm md:text-base">
                         {step.description}
                       </p>
                     </div>

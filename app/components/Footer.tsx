@@ -7,7 +7,7 @@ export default function Footer() {
   const linkStyle = "text-gray-300 hover:text-white transition-colors text-sm no-underline font-normal";
   
   return (
-    <footer className="bg-[#313d46] text-white py-12 md:py-16">
+    <footer className="bg-[#141B41] text-white py-12 md:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo and Badges */}
@@ -61,14 +61,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="tel:855-537-8776" className={linkStyle}>
-                  855-537-8776
+                <Link href="tel:+1805630770" className={linkStyle}>
+                  805-630-770
                 </Link>
               </li>
               <li>
-                <Link href="https://goo.gl/maps/VfdgHdbfd41Hn9f19" className={linkStyle}>
-                  600 B Street<br />Suite 300<br />San Diego, CA 92101
-                </Link>
+                <span className="text-gray-300 text-sm block">
+                  5737 Kanan Rd. #592<br />Agoura Hills, CA 91301
+                </span>
               </li>
             </ul>
           </div>

@@ -14,31 +14,31 @@ const services: ServiceCard[] = [
   {
     title: 'Bookkeeping',
     description: 'We handle your day-to-day bookkeeping and monthly close so your financials are accurate, organized, and always up to date — giving you clear visibility into your business at any time.',
-    gradient: 'linear-gradient(48deg, #1A3B5D 0%, #2AA198 100%)',
+    gradient: 'linear-gradient(48deg, #141B41 0%, #306BAC 100%)',
     icon: 'calculator',
   },
   {
     title: 'Individual/Business Tax Prep',
     description: 'Comprehensive tax preparation for individuals and businesses, ensuring returns are accurate, compliant, and optimized to reduce surprises and allows you to sit back stress-free.',
-    gradient: 'linear-gradient(48deg, #2AA198 0%, #1A3B5D 100%)',
+    gradient: 'linear-gradient(48deg, #306BAC 0%, #918EF4 100%)',
     icon: 'document',
   },
   {
     title: 'Fractional CFO',
     description: 'High-level financial leadership to help you plan for growth, manage cash flow, and make strategic decisions — without the cost of a full-time CFO.',
-    gradient: 'linear-gradient(48deg, #1A3B5D 0%, #35b8ad 100%)',
+    gradient: 'linear-gradient(48deg, #141B41 0%, #918EF4 100%)',
     icon: 'chart',
   },
   {
     title: 'Financial Analysis & Strategy',
     description: 'In-depth financial analysis, forecasting, and strategic planning that turns your numbers into clear insights you can use to drive smarter decisions.',
-    gradient: 'linear-gradient(48deg, #1e4d6b 0%, #2AA198 100%)',
+    gradient: 'linear-gradient(48deg, #6F9CEE 0%, #141B41 100%)',
     icon: 'magnify',
   },
   {
     title: 'Entity Set Up',
     description: 'Guidance and execution for selecting and setting up the right business entity, structured correctly from the start to support compliance, tax efficiency, and long-term goals.',
-    gradient: 'linear-gradient(48deg, #2AA198 0%, #1e4d6b 100%)',
+    gradient: 'linear-gradient(48deg, #918EF4 0%, #306BAC 100%)',
     icon: 'building',
   },
 ];
@@ -133,7 +133,7 @@ export default function BuiltForYourBusiness() {
   return (
     <section className="w-full bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-16">
       <h2
-        className="text-center font-semibold text-[#313d46] mb-20"
+        className="text-center font-semibold text-[#141B41] mb-20"
         style={{
           fontSize: 'clamp(2rem, 5vw, 3.5rem)',
           fontWeight: 600,

@@ -58,7 +58,7 @@ export default function ServicesPreview() {
   return (
     <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1A3B5D] via-[#1A3B5D] to-[#2AA198]"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#141B41] via-[#306BAC] to-[#918EF4]"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">

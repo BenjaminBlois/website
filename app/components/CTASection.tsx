@@ -19,7 +19,7 @@ export default function CTASection() {
           fill
           className="object-cover md:hidden"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1A3B5D]/90 to-[#2AA198]/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#141B41]/90 via-[#306BAC]/90 to-[#918EF4]/90"></div>
       </div>
 
       {/* Content */}
@@ -34,7 +34,7 @@ export default function CTASection() {
         </p>
         <button
           onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-          className="inline-flex items-center justify-center gap-2 bg-white text-[#1A3B5D] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
+          className="inline-flex items-center justify-center gap-2 bg-white text-[#141B41] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-[#98B9F2]/20 transition-colors cursor-pointer"
         >
           Book a Call
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
