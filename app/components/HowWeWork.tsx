@@ -90,7 +90,7 @@ export default function HowWeWork() {
               </div>
             </div>
 
-            {/* Right side - 16:9 image spanning section vertically */}
+            {/* Right side - 9:16 image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -104,7 +104,7 @@ export default function HowWeWork() {
                   background: 'rgba(255,255,255,0.3)',
                   backdropFilter: 'blur(8px)',
                   padding: '10px',
-                  aspectRatio: '16/9',
+                  aspectRatio: '9/16',
                 }}
               >
                 <Image
