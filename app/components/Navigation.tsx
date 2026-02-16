@@ -27,10 +27,10 @@ export default function Navigation() {
               {/* Dropdown menu */}
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
                 <Link href="/services/individual" className="block px-4 py-3 text-sm text-[#141B41] hover:bg-gray-50 hover:text-[#306BAC] no-underline rounded-t-lg">
-                  Personal
+                  For Individuals
                 </Link>
                 <Link href="/services/business" className="block px-4 py-3 text-sm text-[#141B41] hover:bg-gray-50 hover:text-[#306BAC] no-underline rounded-b-lg">
-                  Business
+                  For Businesses
                 </Link>
               </div>
             </div>
@@ -78,10 +78,10 @@ export default function Navigation() {
             <div className="space-y-2">
               <p className="text-[#141B41]/50 text-sm font-semibold">Services</p>
               <Link href="/services/individual" className="block pl-4 text-[#141B41] hover:text-[#306BAC] font-semibold">
-                Personal
+                For Individuals
               </Link>
               <Link href="/services/business" className="block pl-4 text-[#141B41] hover:text-[#306BAC] font-semibold">
-                Business
+                For Businesses
               </Link>
             </div>
             <Link href="/about" className="block text-[#141B41] hover:text-[#306BAC] font-semibold">

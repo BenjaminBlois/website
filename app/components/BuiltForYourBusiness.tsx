@@ -135,7 +135,7 @@ export default function BuiltForYourBusiness() {
   return (
     <section className="w-full bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-16">
       <h2
-        className="text-center font-semibold text-[#141B41] mb-28"
+        className="text-center font-semibold text-[#141B41] mb-32"
         style={{
           fontSize: 'clamp(2rem, 5vw, 3.5rem)',
           fontWeight: 600,

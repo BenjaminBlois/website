@@ -62,7 +62,7 @@ export default function HowWeWork() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#141B41] mb-16"
+                className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#141B41] mb-20"
               >
                 How It Works
               </motion.h2>
