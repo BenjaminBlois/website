@@ -7,11 +7,11 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <nav className="bg-white sticky top-0 z-50" style={{ borderBottom: '2px solid transparent', borderImage: 'linear-gradient(to right, #141B41, #306BAC, #6F9CEE, #98B9F2, #918EF4) 1' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="no-underline" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: '1.5rem', color: '#000000', textDecoration: 'none' }}>
+          <Link href="/" className="no-underline" style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 500, fontSize: '1.5rem', color: '#141B41', textDecoration: 'none' }}>
             numeriq
           </Link>
 

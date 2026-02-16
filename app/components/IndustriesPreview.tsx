@@ -76,18 +76,28 @@ export default function IndustriesPreview() {
           Business Types We Serve
         </h2>
         
-        {/* Two Row Grid */}
+        {/* Two Row Grid — gradient flows L→R across each row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
           {businessTypes.map((type, index) => {
-            const colors = ['#141B41', '#306BAC', '#6F9CEE', '#918EF4', '#306BAC', '#141B41', '#918EF4', '#6F9CEE'];
+            const gradients = [
+              'linear-gradient(135deg, #141B41, #1E2F6A)',
+              'linear-gradient(135deg, #1E2F6A, #306BAC)',
+              'linear-gradient(135deg, #306BAC, #6F9CEE)',
+              'linear-gradient(135deg, #6F9CEE, #918EF4)',
+              'linear-gradient(135deg, #306BAC, #6F9CEE)',
+              'linear-gradient(135deg, #6F9CEE, #98B9F2)',
+              'linear-gradient(135deg, #98B9F2, #918EF4)',
+              'linear-gradient(135deg, #918EF4, #6F9CEE)',
+            ];
             return (
               <div
                 key={index}
-                className="flex flex-col items-center gap-3 bg-[#98B9F2]/8 rounded-xl p-6 hover:bg-[#98B9F2]/15 transition-colors"
+                className="flex flex-col items-center gap-3 rounded-xl p-6 hover:scale-[1.03] transition-transform"
+                style={{ background: `${gradients[index]}10` }}
               >
                 <div
-                  className="w-16 h-16 text-white rounded-full flex items-center justify-center"
-                  style={{ backgroundColor: colors[index % colors.length] }}
+                  className="w-16 h-16 text-white rounded-full flex items-center justify-center shadow-md"
+                  style={{ background: gradients[index] }}
                 >
                   {renderIcon(type.icon)}
                 </div>
