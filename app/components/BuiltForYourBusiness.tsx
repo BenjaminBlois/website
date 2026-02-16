@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 interface ServiceCard {
   title: string;
   description: string;
-  gradient: string;
+  color: string;
   icon: string;
 }
 
@@ -14,31 +14,31 @@ const services: ServiceCard[] = [
   {
     title: 'Bookkeeping',
     description: 'We handle your day-to-day bookkeeping and monthly close so your financials are accurate, organized, and always up to date — giving you clear visibility into your business at any time.',
-    gradient: 'linear-gradient(135deg, #141B41 0%, #306BAC 100%)',
+    color: '#98B9F2',
     icon: 'calculator',
   },
   {
     title: 'Individual/Business Tax Prep',
     description: 'Comprehensive tax preparation for individuals and businesses, ensuring returns are accurate, compliant, and optimized to reduce surprises and allows you to sit back stress-free.',
-    gradient: 'linear-gradient(135deg, #1E2F6A 0%, #6F9CEE 100%)',
+    color: '#6F9CEE',
     icon: 'document',
   },
   {
     title: 'Fractional CFO',
     description: 'High-level financial leadership to help you plan for growth, manage cash flow, and make strategic decisions — without the cost of a full-time CFO.',
-    gradient: 'linear-gradient(135deg, #306BAC 0%, #98B9F2 100%)',
+    color: '#918EF4',
     icon: 'chart',
   },
   {
     title: 'Financial Analysis & Strategy',
     description: 'In-depth financial analysis, forecasting, and strategic planning that turns your numbers into clear insights you can use to drive smarter decisions.',
-    gradient: 'linear-gradient(135deg, #6F9CEE 0%, #918EF4 100%)',
+    color: '#306BAC',
     icon: 'magnify',
   },
   {
     title: 'Entity Set Up',
     description: 'Guidance and execution for selecting and setting up the right business entity, structured correctly from the start to support compliance, tax efficiency, and long-term goals.',
-    gradient: 'linear-gradient(135deg, #98B9F2 0%, #918EF4 100%)',
+    color: '#141B41',
     icon: 'building',
   },
 ];
@@ -94,7 +94,7 @@ function ServiceCardComponent({ service, index }: { service: ServiceCard; index:
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="w-full relative overflow-hidden"
       style={{
-        background: service.gradient,
+        backgroundColor: service.color,
         borderRadius: '40px',
         padding: '60px 48px',
       }}
