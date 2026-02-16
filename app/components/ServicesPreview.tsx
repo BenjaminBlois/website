@@ -56,16 +56,13 @@ export default function ServicesPreview() {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#141B41] via-[#306BAC] to-[#918EF4]"></div>
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-12 md:py-16 lg:py-20 bg-[#F5F7FA]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
             <h2 
-              className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-4"
+              className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-4"
             >
               Why People Choose Numeriq
             </h2>
@@ -76,16 +73,16 @@ export default function ServicesPreview() {
             {services.map((service, index) => (
               <div 
                 key={index} 
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 flex items-start gap-5 hover:bg-white/15 transition-colors"
+                className="bg-white rounded-xl p-6 md:p-8 flex items-start gap-5 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white">
+                <div className="flex-shrink-0 w-12 h-12 bg-[#306BAC] rounded-full flex items-center justify-center text-white">
                   {renderIcon(service.icon)}
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-white mb-2">
+                  <h3 className="text-xl md:text-2xl font-semibold text-[#141B41] mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-white/85 text-base md:text-lg leading-relaxed">
+                  <p className="text-[#141B41]/65 text-base md:text-lg leading-relaxed">
                     {service.description}
                   </p>
                 </div>
