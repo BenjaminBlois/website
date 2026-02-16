@@ -4,26 +4,19 @@ import Image from 'next/image';
 
 export default function CTASection() {
   return (
-    <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden">
-      {/* Background Image with Gradient Overlay */}
+    <section className="relative pt-16 md:pt-20 lg:pt-24 pb-0 overflow-hidden">
+      {/* Gradient fade from testimonials tint into dark */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/Footer CTA bg-desktop.png"
-          alt=""
-          fill
-          className="object-cover hidden md:block"
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to bottom, rgba(152,185,242,0.15) 0%, #306BAC 30%, #1E2F6A 65%, #141B41 100%)',
+          }}
         />
-        <Image
-          src="/Footer CTA bg-mobile.png"
-          alt=""
-          fill
-          className="object-cover md:hidden"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#141B41]/90 via-[#306BAC]/90 to-[#918EF4]/90"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center pb-16 md:pb-20 lg:pb-24">
         <h2 
           className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold mb-6 md:mb-8 text-white"
         >
@@ -34,7 +27,7 @@ export default function CTASection() {
         </p>
         <button
           onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-          className="inline-flex items-center justify-center gap-2 bg-white text-[#141B41] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-[#98B9F2]/20 transition-colors cursor-pointer"
+          className="inline-flex items-center justify-center gap-2 bg-white text-[#141B41] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-white/90 transition-colors cursor-pointer"
         >
           Book a Call
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,6 +35,12 @@ export default function CTASection() {
           </svg>
         </button>
       </div>
+
+      {/* Bottom bleed — seamless into footer */}
+      <div
+        className="h-16 md:h-24 relative z-0"
+        style={{ backgroundColor: '#141B41' }}
+      />
     </section>
   );
 }

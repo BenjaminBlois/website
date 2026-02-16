@@ -70,7 +70,7 @@ export default function IndustriesPreview() {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-white">
+    <section className="py-12 md:py-16 lg:py-20 bg-[#98B9F2]/5">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8 text-center">
           Business Types We Serve

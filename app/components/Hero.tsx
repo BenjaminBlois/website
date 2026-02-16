@@ -30,7 +30,7 @@ export default function Hero() {
             <button
               onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
               className="inline-flex items-center gap-2 text-white px-8 py-4 rounded-[30px] font-semibold text-lg hover:opacity-90 transition-opacity cursor-pointer no-underline"
-              style={{ background: 'linear-gradient(to right, #141B41, #306BAC, #918EF4)' }}
+              style={{ background: 'linear-gradient(to right, #306BAC, #6F9CEE, #918EF4)' }}
             >
               Book a Call
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
