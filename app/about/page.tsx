@@ -173,26 +173,25 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Smooth gradient wrapper: last section + CTA + Footer */}
-      <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #e8eefc 10%, #98B9F2 25%, #6F9CEE 40%, #306BAC 60%, #1E2F6A 80%, #141B41 95%)' }}>
-        {/* Who We Serve */}
-        <section className="py-12 md:py-16 lg:py-20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">
-                Who We Serve
-              </h2>
-              <p className="text-lg text-[#141B41]/65 mb-4">
-                We work with individuals, owner-operated businesses, and growing companies across a wide range of industries.
-              </p>
-              <p className="text-lg text-[#141B41]/65">
-                From simple personal tax returns to multi-entity businesses, our approach adapts to your needs while maintaining the same standard of accuracy and care.
-              </p>
-            </div>
+      {/* Who We Serve */}
+      <section className="py-12 md:py-16 lg:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">
+              Who We Serve
+            </h2>
+            <p className="text-lg text-[#141B41]/65 mb-4">
+              We work with individuals, owner-operated businesses, and growing companies across a wide range of industries.
+            </p>
+            <p className="text-lg text-[#141B41]/65">
+              From simple personal tax returns to multi-entity businesses, our approach adapts to your needs while maintaining the same standard of accuracy and care.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
+      {/* CTA + Footer gradient wrapper */}
+      <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #e8eefc 8%, #98B9F2 20%, #6F9CEE 35%, #306BAC 55%, #1E2F6A 75%, #141B41 100%)' }}>
         <section className="py-16 md:py-20 lg:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white">
@@ -209,7 +208,6 @@ export default function AboutPage() {
             </button>
           </div>
         </section>
-
         <Footer />
       </div>
     </main>
