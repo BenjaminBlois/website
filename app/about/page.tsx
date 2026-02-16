@@ -5,20 +5,7 @@ import Footer from '../components/Footer';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
-function AnimatedSection({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.08 });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
-      transition={{ duration: 0.55, delay, ease: 'easeOut' }}
-    >
-      {children}
-    </motion.div>
-  );
-}
+import { RevealBlock, SectionReveal } from '../components/SectionReveal';
 
 export default function AboutPage() {
   const principles = [
@@ -79,19 +66,19 @@ export default function AboutPage() {
     <main className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Hero Section - two-column stagger like homepage */}
       <section className="relative bg-white py-16 md:py-20 lg:py-24">
-        <AnimatedSection>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-[#141B41]">
-                  Built on Accuracy, Transparency, and Trust.
-                </h1>
-                <p className="text-lg md:text-xl text-[#141B41]/65">
-                  Numeriq was founded to give individuals and businesses clear, reliable financial support-without the confusion, stress, or surprise costs.
-                </p>
-              </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <RevealBlock delay={0}>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-[#141B41]">
+                Built on Accuracy, Transparency, and Trust.
+              </h1>
+              <p className="text-lg md:text-xl text-[#141B41]/65">
+                Numeriq was founded to give individuals and businesses clear, reliable financial support-without the confusion, stress, or surprise costs.
+              </p>
+            </RevealBlock>
+            <RevealBlock delay={0.15}>
               <div className="relative">
                 <Image
                   src="/about-hero.png"
@@ -101,84 +88,96 @@ export default function AboutPage() {
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />
               </div>
-            </div>
+            </RevealBlock>
           </div>
-        </AnimatedSection>
+        </div>
       </section>
 
       {/* Why We Started */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
-        <AnimatedSection>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+            <RevealBlock delay={0}>
               <div className="relative">
                 <Image
-                src="/about-why-we-started.png"
-                alt="Reviewing financials on laptop"
-                width={500}
-                height={400}
-                className="rounded-2xl shadow-lg w-full h-auto"
-              />
-            </div>
-            <div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">
-                Why We Started Numeriq
-              </h2>
-              <div className="space-y-4 text-[#141B41]/65 text-lg leading-relaxed">
-                <p>
-                  We started Numeriq after seeing how often individuals and business owners felt left in the dark about their finances. Too many firms overcomplicate the process, communicate poorly, or charge unpredictably.
-                </p>
-                <p>
-                  Our goal was simple: provide accurate accounting, clear communication, and fixed pricing-so clients always know where they stand and what they're paying for.
-                </p>
-                <p>
-                  Whether you're filing a personal tax return or managing a growing business, we believe financial clarity should be accessible, proactive, and stress-free.
-                </p>
+                  src="/about-why-we-started.png"
+                  alt="Reviewing financials on laptop"
+                  width={500}
+                  height={400}
+                  className="rounded-2xl shadow-lg w-full h-auto"
+                />
               </div>
-            </div>
+            </RevealBlock>
+            <RevealBlock delay={0.12}>
+              <div>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">
+                  Why We Started Numeriq
+                </h2>
+                <div className="space-y-4 text-[#141B41]/65 text-lg leading-relaxed">
+                  <p>
+                    We started Numeriq after seeing how often individuals and business owners felt left in the dark about their finances. Too many firms overcomplicate the process, communicate poorly, or charge unpredictably.
+                  </p>
+                  <p>
+                    Our goal was simple: provide accurate accounting, clear communication, and fixed pricing-so clients always know where they stand and what they're paying for.
+                  </p>
+                  <p>
+                    Whether you're filing a personal tax return or managing a growing business, we believe financial clarity should be accessible, proactive, and stress-free.
+                  </p>
+                </div>
+              </div>
+            </RevealBlock>
           </div>
-        </AnimatedSection>
+        </div>
       </section>
 
-      {/* Our Core Principles */}
+      {/* Our Core Principles - header then staggered cards */}
       <section className="py-12 md:py-16 lg:py-20 bg-white px-4 sm:px-8 lg:px-16">
-        <AnimatedSection>
-          <h2
-            className="text-center font-semibold text-[#141B41]"
-            style={{
-              fontSize: 'clamp(1.75rem, 4vw, 3rem)',
-              fontWeight: 600,
-              letterSpacing: '-0.02em',
-              lineHeight: '1.1',
-            }}
-          >
-            Our Core Principles
-          </h2>
-          <div style={{ height: '6rem', minHeight: '6rem' }} aria-hidden="true" />
-        </AnimatedSection>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {principles.map((principle, index) => {
-            const cardColors = [
-              '#6F9CEE',
-              '#918EF4',
-              '#306BAC',
-              '#141B41',
-            ];
-            return (
-              <PrincipleCard key={index} index={index} cardColors={cardColors} principle={principle} renderIcon={renderIcon} />
-            );
-          })}
-        </div>
+        <SectionReveal
+          heading={
+            <>
+              <h2
+                className="text-center font-semibold text-[#141B41]"
+                style={{
+                  fontSize: 'clamp(1.75rem, 4vw, 3rem)',
+                  fontWeight: 600,
+                  letterSpacing: '-0.02em',
+                  lineHeight: '1.1',
+                }}
+              >
+                Our Core Principles
+              </h2>
+              <div style={{ height: '6rem', minHeight: '6rem' }} aria-hidden="true" />
+            </>
+          }
+          contentDelay={0.05}
+        >
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {principles.map((principle, index) => {
+              const cardColors = [
+                '#6F9CEE',
+                '#918EF4',
+                '#306BAC',
+                '#141B41',
+              ];
+              return (
+                <PrincipleCard key={index} index={index} cardColors={cardColors} principle={principle} renderIcon={renderIcon} />
+              );
+            })}
+          </div>
+        </SectionReveal>
       </section>
 
       {/* Who We Serve */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
-        <AnimatedSection>
+        <SectionReveal
+          heading={
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">
+              Who We Serve
+            </h2>
+          }
+        >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">
-                Who We Serve
-              </h2>
               <p className="text-lg text-[#141B41]/65 mb-4">
                 We work with individuals, owner-operated businesses, and growing companies across a wide range of industries.
               </p>
@@ -187,13 +186,13 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-        </AnimatedSection>
+        </SectionReveal>
       </section>
 
       {/* CTA + Footer gradient wrapper */}
       <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #e8eefc 8%, #98B9F2 18%, #6F9CEE 30%, #306BAC 45%, #1E2F6A 60%, #141B41 75%)' }}>
         <section className="py-16 md:py-20 lg:py-24">
-          <AnimatedSection>
+          <RevealBlock>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white">
                 Let&apos;s Simplify Your Finances
@@ -208,7 +207,7 @@ export default function AboutPage() {
                 Book a Call
               </button>
             </div>
-          </AnimatedSection>
+          </RevealBlock>
         </section>
         <Footer />
       </div>

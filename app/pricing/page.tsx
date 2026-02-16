@@ -5,20 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
-function AnimatedSection({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.08 });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
-      transition={{ duration: 0.55, delay, ease: 'easeOut' }}
-    >
-      {children}
-    </motion.div>
-  );
-}
+import { RevealBlock } from '../components/SectionReveal';
 
 const QUOTE_FORM_URL = 'https://form.jotform.com/260287243172152';
 
@@ -80,7 +67,7 @@ export default function PricingPage() {
       
       {/* Hero Section */}
       <section className="relative bg-white pt-16 md:pt-20 lg:pt-24 pb-0">
-        <AnimatedSection>
+        <RevealBlock>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#141B41] mb-4">
               Fixed Pricing. Tailored for You.
@@ -89,7 +76,7 @@ export default function PricingPage() {
               Every service we offer comes with a clear, fixed price customized to your needs. Know exactly what you're paying—no surprises, no hourly fees.
             </p>
           </div>
-        </AnimatedSection>
+        </RevealBlock>
       </section>
 
       {/* Pricing Cards - horizontal slider, 3 visible */}
@@ -170,7 +157,7 @@ export default function PricingPage() {
       {/* CTA + Footer gradient wrapper */}
       <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #e8eefc 8%, #98B9F2 18%, #6F9CEE 30%, #306BAC 45%, #1E2F6A 60%, #141B41 75%)' }}>
         <section className="py-16 md:py-20 lg:py-24">
-          <AnimatedSection>
+          <RevealBlock>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white">
               Let&apos;s Simplify Your Finances
@@ -185,7 +172,7 @@ export default function PricingPage() {
               Book a Call
             </button>
             </div>
-          </AnimatedSection>
+          </RevealBlock>
         </section>
 
         <Footer />

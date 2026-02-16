@@ -1,14 +1,14 @@
 'use client';
 
 import Image from 'next/image';
+import { RevealBlock } from './SectionReveal';
 
 export default function Hero() {
   return (
     <section className="relative bg-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 py-12 md:py-16 lg:py-20">
-          {/* Text Content */}
-          <div className="flex-1 w-full lg:w-auto">
+          <RevealBlock delay={0} className="flex-1 w-full lg:w-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-[#141B41] mb-6 leading-tight">
               Tax and Accounting Made Simple
             </h1>
@@ -27,10 +27,9 @@ export default function Hero() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
-          </div>
+          </RevealBlock>
 
-          {/* Hero Image */}
-          <div className="flex-1 w-full lg:w-auto">
+          <RevealBlock delay={0.15} className="flex-1 w-full lg:w-auto">
             <Image
               src="/hero-image.png"
               alt="Professional accounting team"
@@ -39,7 +38,7 @@ export default function Hero() {
               className="w-full h-auto rounded-lg"
               priority
             />
-          </div>
+          </RevealBlock>
         </div>
       </div>
     </section>

@@ -4,22 +4,7 @@ import { useRef } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-
-function AnimatedSection({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.08 });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 28 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
-      transition={{ duration: 0.55, delay, ease: 'easeOut' }}
-    >
-      {children}
-    </motion.div>
-  );
-}
+import { RevealBlock, SectionReveal } from '../../components/SectionReveal';
 
 export default function BusinessServicesPage() {
   const servicesScrollRef = useRef<HTMLDivElement>(null);
@@ -169,12 +154,11 @@ export default function BusinessServicesPage() {
     <main className="min-h-screen">
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Hero Section - two-column stagger */}
       <section className="relative bg-white py-16 md:py-20 lg:py-24">
-        <AnimatedSection>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <RevealBlock delay={0}>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#141B41] mb-6">
                 Accounting Built for Growing Businesses
               </h1>
@@ -187,29 +171,29 @@ export default function BusinessServicesPage() {
               >
                 Book a Call
               </button>
-            </div>
-            <div className="relative">
-              <Image
-                src="/business-services-hero.png"
-                alt="Business financial dashboard"
-                width={600}
-                height={450}
-                className="rounded-2xl shadow-2xl w-full h-auto"
-              />
-            </div>
-            </div>
+            </RevealBlock>
+            <RevealBlock delay={0.15}>
+              <div className="relative">
+                <Image
+                  src="/business-services-hero.png"
+                  alt="Business financial dashboard"
+                  width={600}
+                  height={450}
+                  className="rounded-2xl shadow-2xl w-full h-auto"
+                />
+              </div>
+            </RevealBlock>
           </div>
-        </AnimatedSection>
+        </div>
       </section>
 
       {/* Who We Work With */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
-        <AnimatedSection>
+        <SectionReveal
+          heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-4">Who We Work With</h2>}
+        >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-4">
-              Who We Work With
-            </h2>
             <p className="text-lg text-[#141B41]/65 mb-8">
               Our business services support companies at every stage-from new entities to complex, multi-entity organizations.
             </p>
@@ -226,6 +210,7 @@ export default function BusinessServicesPage() {
             </div>
           </div>
         </div>
+        </SectionReveal>
       </section>
 
       {/* Our Business Services */}
@@ -233,12 +218,12 @@ export default function BusinessServicesPage() {
         className="py-12 md:py-16 lg:py-20"
         style={{ background: 'radial-gradient(circle 600px at 80% 30%, rgba(48,107,172,0.12) 0%, transparent 55%), radial-gradient(circle 500px at 20% 70%, rgba(152,185,242,0.15) 0%, transparent 55%), #F0F3FC' }}
       >
-        <AnimatedSection>
+        <SectionReveal
+          heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-16 text-center">Our Business Services</h2>}
+          contentDelay={0.08}
+        >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-16 text-center">
-            Our Business Services
-          </h2>
-          <div className="max-w-6xl mx-auto relative flex items-center gap-4">
+            <div className="max-w-6xl mx-auto relative flex items-center gap-4">
             <button
               type="button"
               onClick={() => scrollServices('left')}
@@ -279,17 +264,17 @@ export default function BusinessServicesPage() {
             </button>
             </div>
           </div>
-        </AnimatedSection>
+        </SectionReveal>
       </section>
 
       {/* How It Works */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
-        <AnimatedSection>
+        <SectionReveal
+          heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41]">How It Works</h2>}
+          contentDelay={0.06}
+        >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41]">
-              How It Works
-            </h2>
             <div className="space-y-6" style={{ paddingTop: '2rem' }}>
               {steps.map((step) => (
                 <div key={step.number} className="flex gap-4">
@@ -309,15 +294,15 @@ export default function BusinessServicesPage() {
             </div>
           </div>
         </div>
-        </AnimatedSection>
+        </SectionReveal>
       </section>
 
       {/* CTA + Footer gradient wrapper */}
       <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #e8eefc 8%, #98B9F2 18%, #6F9CEE 30%, #306BAC 45%, #1E2F6A 60%, #141B41 75%)' }}>
         <section className="py-16 md:py-20 lg:py-24">
-          <AnimatedSection>
+          <RevealBlock>
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white">
               Let&apos;s Simplify Your Finances
             </h2>
             <p className="text-lg md:text-xl text-white/85 mb-8 max-w-2xl mx-auto">
@@ -330,7 +315,7 @@ export default function BusinessServicesPage() {
               Book a Call
             </button>
             </div>
-          </AnimatedSection>
+          </RevealBlock>
         </section>
         <Footer />
       </div>
