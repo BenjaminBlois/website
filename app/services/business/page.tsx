@@ -1,10 +1,21 @@
 'use client';
 
+import { useRef } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import Image from 'next/image';
 
 export default function BusinessServicesPage() {
+  const servicesScrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollServices = (direction: 'left' | 'right') => {
+    const el = servicesScrollRef.current;
+    if (!el) return;
+    const cardWidth = el.querySelector('.service-card')?.getBoundingClientRect().width ?? 280;
+    const gap = 24;
+    const scrollAmount = (cardWidth + gap) * (direction === 'left' ? -1 : 1);
+    el.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  };
   const businessTypes = [
     { name: 'Owner-operated businesses', icon: 'person' },
     { name: 'Service-based companies', icon: 'handshake' },
@@ -204,19 +215,48 @@ export default function BusinessServicesPage() {
         style={{ background: 'radial-gradient(circle 600px at 80% 30%, rgba(48,107,172,0.12) 0%, transparent 55%), radial-gradient(circle 500px at 20% 70%, rgba(152,185,242,0.15) 0%, transparent 55%), #F0F3FC' }}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-16 text-center">
             Our Business Services
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="w-14 h-14 bg-[#306BAC] text-white rounded-full flex items-center justify-center mb-4">
-                  {renderIcon(service.icon)}
+          <div className="max-w-6xl mx-auto relative flex items-center gap-4">
+            <button
+              type="button"
+              onClick={() => scrollServices('left')}
+              className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-[#306BAC] hover:bg-[#306BAC] hover:text-white transition-colors cursor-pointer"
+              aria-label="Scroll left"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <div
+              ref={servicesScrollRef}
+              className="flex gap-6 overflow-x-auto overflow-y-hidden py-2 scroll-smooth min-h-[200px] flex-1 max-w-[calc(300px*3+24*2)]"
+              style={{ scrollbarWidth: 'thin' }}
+            >
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="service-card flex-shrink-0 w-[calc(100%-2rem)] sm:w-[280px] md:w-[300px] bg-white rounded-xl p-6 shadow-sm"
+                >
+                  <div className="w-14 h-14 bg-[#306BAC] text-white rounded-full flex items-center justify-center mb-4">
+                    {renderIcon(service.icon)}
+                  </div>
+                  <h3 className="text-xl font-semibold text-[#141B41] mb-3">{service.title}</h3>
+                  <p className="text-[#141B41]/65 text-sm md:text-base">{service.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-[#141B41] mb-3">{service.title}</h3>
-                <p className="text-[#141B41]/65 text-sm md:text-base">{service.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={() => scrollServices('right')}
+              className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-[#306BAC] hover:bg-[#306BAC] hover:text-white transition-colors cursor-pointer"
+              aria-label="Scroll right"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
         </div>
       </section>
