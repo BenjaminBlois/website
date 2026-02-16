@@ -14,9 +14,9 @@ export default function Hero() {
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-[#141B41]/65 mb-8 leading-relaxed">
               Tax preparation and accounting services for individuals and businesses who want{' '}
-              <span className="font-bold text-[#306BAC]">clarity</span>,{' '}
-              <span className="font-bold text-[#306BAC]">accuracy</span>, and{' '}
-              <span className="font-bold text-[#306BAC]">maximize</span>{' '}
+              <span className="font-bold" style={{ color: '#306BAC' }}>clarity</span>,{' '}
+              <span className="font-bold" style={{ color: '#6F9CEE' }}>accuracy</span>, and{' '}
+              <span className="font-bold" style={{ color: '#918EF4' }}>maximum</span>{' '}
               peace of mind.
             </p>
             <button
