@@ -62,10 +62,11 @@ export default function HowWeWork() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#141B41] mb-20"
+                className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#141B41]"
               >
                 How It Works
               </motion.h2>
+              <div style={{ height: '6rem', minHeight: '6rem' }} aria-hidden="true" />
               <div className="space-y-6">
                 {steps.map((step, index) => (
                   <AnimatedStep key={step.number} index={index}>
@@ -107,7 +108,7 @@ export default function HowWeWork() {
                 }}
               >
                 <Image
-                  src="/about-why-we-started.png"
+                  src="/how-it-works.png"
                   alt="Team consulting with clients"
                   width={800}
                   height={450}
