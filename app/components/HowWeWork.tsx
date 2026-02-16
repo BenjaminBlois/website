@@ -66,8 +66,7 @@ export default function HowWeWork() {
               >
                 How It Works
               </motion.h2>
-              <div style={{ height: '6rem', minHeight: '6rem' }} aria-hidden="true" />
-              <div className="space-y-6">
+              <div className="space-y-6" style={{ paddingTop: '8rem' }}>
                 {steps.map((step, index) => (
                   <AnimatedStep key={step.number} index={index}>
                     <div className="flex gap-4 group">
