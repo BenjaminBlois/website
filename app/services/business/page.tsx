@@ -250,7 +250,7 @@ export default function BusinessServicesPage() {
       </section>
 
       {/* CTA + Footer gradient wrapper */}
-      <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #e8eefc 8%, #98B9F2 20%, #6F9CEE 35%, #306BAC 55%, #1E2F6A 75%, #141B41 100%)' }}>
+      <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #e8eefc 8%, #98B9F2 18%, #6F9CEE 30%, #306BAC 45%, #1E2F6A 60%, #141B41 75%)' }}>
         <section className="py-16 md:py-20 lg:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white">
