@@ -10,14 +10,13 @@ export default function Hero() {
           {/* Text Content */}
           <div className="flex-1 w-full lg:w-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-[#141B41] mb-6 leading-tight">
-              Tax and Accounting made Simple
+              Tax and Accounting Made Simple
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-[#141B41]/65 mb-8 leading-relaxed">
               Tax preparation and accounting services for individuals and businesses who want{' '}
               <span className="font-bold" style={{ color: '#306BAC' }}>clarity</span>,{' '}
               <span className="font-bold" style={{ color: '#6F9CEE' }}>accuracy</span>, and{' '}
-              <span className="font-bold" style={{ color: '#918EF4' }}>maximum</span>{' '}
-              peace of mind.
+              <span className="font-bold" style={{ color: '#918EF4' }}>maximum peace of mind.</span>
             </p>
             <button
               onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}

@@ -62,7 +62,7 @@ export default function HowWeWork() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-10"
+                className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#141B41] mb-16"
               >
                 How It Works
               </motion.h2>
@@ -109,9 +109,9 @@ export default function HowWeWork() {
                 <Image
                   src="/about-why-we-started.png"
                   alt="Team consulting with clients"
-                  width={600}
-                  height={500}
-                  className="w-full h-auto object-cover rounded-[16px]"
+                  width={800}
+                  height={450}
+                  className="w-full aspect-video object-cover rounded-[16px]"
                 />
               </div>
             </motion.div>
