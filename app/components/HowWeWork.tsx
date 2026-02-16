@@ -90,16 +90,16 @@ export default function HowWeWork() {
               </div>
             </div>
 
-            {/* Right side - 9:16 image */}
+            {/* Right side - 9:16 image (70% size) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative w-full"
+              className="relative w-full flex justify-center"
             >
               <div
-                className="relative w-full rounded-[24px] overflow-hidden shadow-2xl border border-white/40"
+                className="relative w-[70%] max-w-[70%] rounded-[24px] overflow-hidden shadow-2xl border border-white/40"
                 style={{
                   background: 'rgba(255,255,255,0.3)',
                   backdropFilter: 'blur(8px)',
