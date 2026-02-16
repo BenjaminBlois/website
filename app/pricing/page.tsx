@@ -63,12 +63,12 @@ export default function PricingPage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#1A3B5D] to-[#2AA198] py-16 md:py-20 lg:py-24">
+      <section className="relative bg-white py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#141B41] mb-4">
             Fixed Pricing. Tailored for You.
           </h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-[#141B41]/65 max-w-3xl mx-auto">
             Every service we offer comes with a clear, fixed price customized to your needs. Know exactly what you're paying—no surprises, no hourly fees.
           </p>
         </div>
@@ -86,20 +86,20 @@ export default function PricingPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="relative bg-white rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col h-full transition-all duration-300 hover:shadow-xl"
               >
-                <h3 className="text-xl sm:text-2xl font-bold text-[#313d46] mb-3 leading-tight">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#141B41] mb-3 leading-tight">
                   {service.name}
                 </h3>
-                <p className="text-sm sm:text-base text-[#393f41] mb-6 leading-relaxed flex-grow">
+                <p className="text-sm sm:text-base text-[#141B41]/65 mb-6 leading-relaxed flex-grow">
                   {service.description}
                 </p>
                 <div className="mb-6">
-                  <span className="inline-block bg-[#1A3B5D]/10 text-[#1A3B5D] px-4 py-1.5 rounded-full text-sm font-semibold">
+                  <span className="inline-block bg-[#306BAC]/10 text-[#306BAC] px-4 py-1.5 rounded-full text-sm font-semibold">
                     {service.pricing}
                   </span>
                 </div>
                 <Link
                   href={service.ctaHref}
-                  className="w-full text-center block px-6 py-3 rounded-lg font-semibold text-white bg-[#1A3B5D] hover:bg-[#0f2a3f] transition-all duration-300 shadow-md hover:shadow-lg no-underline"
+                  className="w-full text-center block px-6 py-3 rounded-lg font-semibold text-white bg-[#306BAC] hover:bg-[#2759A0] transition-all duration-300 shadow-md hover:shadow-lg no-underline"
                 >
                   {service.ctaText}
                 </Link>
@@ -108,7 +108,7 @@ export default function PricingPage() {
           </div>
 
           {/* Bottom text */}
-          <p className="text-center text-[#393f41] mt-12 text-lg max-w-2xl mx-auto">
+          <p className="text-center text-[#141B41]/65 mt-12 text-lg max-w-2xl mx-auto">
             With Numeriq, fixed pricing means transparency, predictability, and peace of mind. You'll always know what you're paying for and why.
           </p>
         </div>
@@ -116,7 +116,7 @@ export default function PricingPage() {
 
       {/* CTA Section */}
       <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1A3B5D] to-[#2AA198]"></div>
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(152,185,242,0.15) 0%, #306BAC 30%, #1E2F6A 65%, #141B41 100%)' }}></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white">
             Let&apos;s Simplify Your Finances
@@ -126,7 +126,7 @@ export default function PricingPage() {
           </p>
           <button
             onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-            className="inline-flex items-center justify-center gap-2 bg-white text-[#1A3B5D] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 bg-white text-[#141B41] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
           >
             Book a Call
           </button>

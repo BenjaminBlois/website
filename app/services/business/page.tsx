@@ -143,19 +143,19 @@ export default function BusinessServicesPage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#1A3B5D] to-[#2AA198] py-16 md:py-20 lg:py-24">
+      <section className="relative bg-white py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#141B41] mb-6">
                 Accounting Built for Growing Businesses
               </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-8">
+              <p className="text-lg md:text-xl text-[#141B41]/65 mb-8">
                 From bookkeeping to tax preparation and CFO-level guidance, we help businesses stay organized, compliant, and financially confident.
               </p>
               <button
                 onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-                className="inline-flex items-center gap-2 bg-white text-[#1A3B5D] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 bg-[#306BAC] text-white px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-[#2759A0] transition-colors cursor-pointer"
               >
                 Book a Call
               </button>
@@ -177,20 +177,20 @@ export default function BusinessServicesPage() {
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#313d46] mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-4">
               Who We Work With
             </h2>
-            <p className="text-lg text-[#393f41] mb-8">
+            <p className="text-lg text-[#141B41]/65 mb-8">
               Our business services support companies at every stage-from new entities to complex, multi-entity organizations.
             </p>
-            <p className="text-lg text-[#393f41] mb-6">We commonly work with:</p>
+            <p className="text-lg text-[#141B41]/65 mb-6">We commonly work with:</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {businessTypes.map((type, index) => (
                 <div key={index} className="flex items-center gap-3 bg-gray-50 rounded-lg p-4">
-                  <div className="w-10 h-10 bg-[#1A3B5D] text-white rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-[#306BAC] text-white rounded-full flex items-center justify-center flex-shrink-0">
                     {renderIcon(type.icon)}
                   </div>
-                  <span className="text-sm md:text-base text-[#313d46] font-medium">{type.name}</span>
+                  <span className="text-sm md:text-base text-[#141B41] font-medium">{type.name}</span>
                 </div>
               ))}
             </div>
@@ -199,19 +199,22 @@ export default function BusinessServicesPage() {
       </section>
 
       {/* Our Business Services */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
+      <section
+        className="py-12 md:py-16 lg:py-20"
+        style={{ background: 'radial-gradient(circle 600px at 80% 30%, rgba(48,107,172,0.12) 0%, transparent 55%), radial-gradient(circle 500px at 20% 70%, rgba(152,185,242,0.15) 0%, transparent 55%), #F0F3FC' }}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#313d46] mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8 text-center">
             Our Business Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="w-14 h-14 bg-[#1A3B5D] text-white rounded-full flex items-center justify-center mb-4">
+                <div className="w-14 h-14 bg-[#306BAC] text-white rounded-full flex items-center justify-center mb-4">
                   {renderIcon(service.icon)}
                 </div>
-                <h3 className="text-xl font-semibold text-[#313d46] mb-3">{service.title}</h3>
-                <p className="text-[#393f41] text-sm md:text-base">{service.description}</p>
+                <h3 className="text-xl font-semibold text-[#141B41] mb-3">{service.title}</h3>
+                <p className="text-[#141B41]/65 text-sm md:text-base">{service.description}</p>
               </div>
             ))}
           </div>
@@ -222,20 +225,20 @@ export default function BusinessServicesPage() {
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#313d46] mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8">
               How It Works
             </h2>
             <div className="space-y-6">
               {steps.map((step) => (
                 <div key={step.number} className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-[#1A3B5D] text-white rounded-full flex items-center justify-center font-semibold text-lg">
+                  <div className="flex-shrink-0 w-10 h-10 bg-[#306BAC] text-white rounded-full flex items-center justify-center font-semibold text-lg">
                     {step.number}
                   </div>
                   <div>
-                    <h3 className="text-lg md:text-xl font-semibold text-[#313d46] mb-1">
+                    <h3 className="text-lg md:text-xl font-semibold text-[#141B41] mb-1">
                       {step.title}
                     </h3>
-                    <p className="text-[#393f41]">
+                    <p className="text-[#141B41]/65">
                       {step.description}
                     </p>
                   </div>
@@ -248,7 +251,7 @@ export default function BusinessServicesPage() {
 
       {/* CTA Section */}
       <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1A3B5D] to-[#2AA198]"></div>
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(152,185,242,0.15) 0%, #306BAC 30%, #1E2F6A 65%, #141B41 100%)' }}></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 
             className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white"
@@ -260,7 +263,7 @@ export default function BusinessServicesPage() {
           </p>
           <button
             onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-            className="inline-flex items-center justify-center gap-2 bg-white text-[#1A3B5D] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 bg-white text-[#141B41] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
           >
             Book a Call
           </button>

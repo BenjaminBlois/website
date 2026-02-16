@@ -64,14 +64,14 @@ export default function AboutPage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#1A3B5D] to-[#2AA198] py-16 md:py-20 lg:py-24">
+      <section className="relative bg-white py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="text-white">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
+            <div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-[#141B41]">
                 Built on Accuracy, Transparency, and trust.
               </h1>
-              <p className="text-lg md:text-xl text-white/90">
+              <p className="text-lg md:text-xl text-[#141B41]/65">
                 Numeriq was founded to give individuals and businesses clear, reliable financial support-without the confusion, stress, or surprise costs.
               </p>
             </div>
@@ -102,10 +102,10 @@ export default function AboutPage() {
               />
             </div>
             <div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#313d46] mb-6">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">
                 Why We Started Numeriq
               </h2>
-              <div className="space-y-4 text-[#393f41] text-lg leading-relaxed">
+              <div className="space-y-4 text-[#141B41]/65 text-lg leading-relaxed">
                 <p>
                   We started Numeriq after seeing how often individuals and business owners felt left in the dark about their finances. Too many firms overcomplicate the process, communicate poorly, or charge unpredictably.
                 </p>
@@ -124,7 +124,7 @@ export default function AboutPage() {
       {/* Our Core Principles */}
       <section className="py-12 md:py-16 lg:py-20 bg-white px-4 sm:px-8 lg:px-16">
         <h2
-          className="text-center font-semibold text-[#313d46] mb-12"
+          className="text-center font-semibold text-[#141B41] mb-12"
           style={{
             fontSize: 'clamp(1.75rem, 4vw, 3rem)',
             fontWeight: 600,
@@ -136,18 +136,18 @@ export default function AboutPage() {
         </h2>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {principles.map((principle, index) => {
-            const gradients = [
-              'linear-gradient(48deg, #1A3B5D 0%, #2AA198 100%)',
-              'linear-gradient(48deg, #2AA198 0%, #1A3B5D 100%)',
-              'linear-gradient(48deg, #1A3B5D 0%, #35b8ad 100%)',
-              'linear-gradient(48deg, #1e4d6b 0%, #2AA198 100%)',
+            const cardColors = [
+              '#6F9CEE',
+              '#918EF4',
+              '#306BAC',
+              '#141B41',
             ];
             return (
               <div
                 key={index}
                 className="relative overflow-hidden flex flex-col items-center text-center"
                 style={{
-                  background: gradients[index],
+                  background: cardColors[index],
                   borderRadius: '30px',
                   padding: '48px 32px',
                 }}
@@ -177,13 +177,13 @@ export default function AboutPage() {
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#313d46] mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">
               Who We Serve
             </h2>
-            <p className="text-lg text-[#393f41] mb-4">
+            <p className="text-lg text-[#141B41]/65 mb-4">
               We work with individuals, owner-operated businesses, and growing companies across a wide range of industries.
             </p>
-            <p className="text-lg text-[#393f41]">
+            <p className="text-lg text-[#141B41]/65">
               From simple personal tax returns to multi-entity businesses, our approach adapts to your needs while maintaining the same standard of accuracy and care.
             </p>
           </div>
@@ -192,7 +192,10 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1A3B5D] to-[#2AA198]"></div>
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(to bottom, rgba(152,185,242,0.15) 0%, #306BAC 30%, #1E2F6A 65%, #141B41 100%)' }}
+        ></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 
             className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white"
@@ -204,7 +207,7 @@ export default function AboutPage() {
           </p>
           <button
             onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-            className="inline-flex items-center justify-center gap-2 bg-white text-[#1A3B5D] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 bg-white text-[#141B41] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
           >
             Book a Call
           </button>

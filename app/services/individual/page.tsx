@@ -38,19 +38,19 @@ export default function IndividualServicesPage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#1A3B5D] to-[#2AA198] py-16 md:py-20 lg:py-24">
+      <section className="relative bg-white py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="text-white">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
+            <div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#141B41] mb-6">
                 Simple, Stress-Free Tax Support
               </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-8">
+              <p className="text-lg md:text-xl text-[#141B41]/65 mb-8">
                 We help individuals file accurate tax returns, understand their finances, and stay compliant-without confusion or last-minute stress.
               </p>
               <button
                 onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-                className="inline-flex items-center gap-2 bg-white text-[#1A3B5D] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 bg-[#306BAC] text-white px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-[#2759A0] transition-colors cursor-pointer"
               >
                 Book a Call
               </button>
@@ -72,32 +72,32 @@ export default function IndividualServicesPage() {
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#313d46] mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">
               Who We Help
             </h2>
-            <p className="text-lg text-[#393f41] mb-6">
+            <p className="text-lg text-[#141B41]/65 mb-6">
               Our individual services are designed for people who want their taxes done right and explained clearly.
             </p>
-            <p className="text-lg text-[#393f41] mb-4">This includes:</p>
-            <ul className="space-y-3 text-[#393f41]">
+            <p className="text-lg text-[#141B41]/65 mb-4">This includes:</p>
+            <ul className="space-y-3 text-[#141B41]/65">
               <li className="flex items-center gap-3">
-                <span className="text-[#2AA198] font-bold">✓</span>
+                <span className="text-[#306BAC] font-bold">✓</span>
                 W-2 employees
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-[#2AA198] font-bold">✓</span>
+                <span className="text-[#306BAC] font-bold">✓</span>
                 Self-employed individuals & freelancers
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-[#2AA198] font-bold">✓</span>
+                <span className="text-[#306BAC] font-bold">✓</span>
                 Investors & rental property owners
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-[#2AA198] font-bold">✓</span>
+                <span className="text-[#306BAC] font-bold">✓</span>
                 High-income earners
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-[#2AA198] font-bold">✓</span>
+                <span className="text-[#306BAC] font-bold">✓</span>
                 Anyone who wants confidence in their tax return
               </li>
             </ul>
@@ -106,34 +106,37 @@ export default function IndividualServicesPage() {
       </section>
 
       {/* Our Services */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
+      <section
+        className="py-12 md:py-16 lg:py-20"
+        style={{ background: 'radial-gradient(circle 600px at 80% 30%, rgba(48,107,172,0.12) 0%, transparent 55%), radial-gradient(circle 500px at 20% 70%, rgba(152,185,242,0.15) 0%, transparent 55%), #F0F3FC' }}
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#313d46] mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8 text-center">
             Our Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {/* Tax Preparation */}
             <div className="bg-white rounded-xl p-8 shadow-sm">
-              <div className="w-14 h-14 bg-[#1A3B5D] text-white rounded-full flex items-center justify-center mb-4">
+              <div className="w-14 h-14 bg-[#306BAC] text-white rounded-full flex items-center justify-center mb-4">
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-[#313d46] mb-3">Individual Tax Preparation</h3>
-              <p className="text-[#393f41]">
+              <h3 className="text-xl font-semibold text-[#141B41] mb-3">Individual Tax Preparation</h3>
+              <p className="text-[#141B41]/65">
                 Accurate, compliant tax preparation designed to maximize efficiency and minimize stress. We ensure your return is filed correctly and on time, with clear explanations along the way.
               </p>
             </div>
             
             {/* Tax Planning */}
             <div className="bg-white rounded-xl p-8 shadow-sm">
-              <div className="w-14 h-14 bg-[#1A3B5D] text-white rounded-full flex items-center justify-center mb-4">
+              <div className="w-14 h-14 bg-[#306BAC] text-white rounded-full flex items-center justify-center mb-4">
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-[#313d46] mb-3">Tax Planning & Guidance</h3>
-              <p className="text-[#393f41]">
+              <h3 className="text-xl font-semibold text-[#141B41] mb-3">Tax Planning & Guidance</h3>
+              <p className="text-[#141B41]/65">
                 Proactive guidance to help you understand deductions, credits, and strategies that can reduce tax liability now and in the future.
               </p>
             </div>
@@ -145,20 +148,20 @@ export default function IndividualServicesPage() {
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#313d46] mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8">
               How It Works
             </h2>
             <div className="space-y-6">
               {steps.map((step) => (
                 <div key={step.number} className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-[#1A3B5D] text-white rounded-full flex items-center justify-center font-semibold text-lg">
+                  <div className="flex-shrink-0 w-10 h-10 bg-[#306BAC] text-white rounded-full flex items-center justify-center font-semibold text-lg">
                     {step.number}
                   </div>
                   <div>
-                    <h3 className="text-lg md:text-xl font-semibold text-[#313d46] mb-1">
+                    <h3 className="text-lg md:text-xl font-semibold text-[#141B41] mb-1">
                       {step.title}
                     </h3>
-                    <p className="text-[#393f41]">
+                    <p className="text-[#141B41]/65">
                       {step.description}
                     </p>
                   </div>
@@ -171,7 +174,10 @@ export default function IndividualServicesPage() {
 
       {/* CTA Section */}
       <section className="relative py-16 md:py-20 lg:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1A3B5D] to-[#2AA198]"></div>
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(to bottom, rgba(152,185,242,0.15) 0%, #306BAC 30%, #1E2F6A 65%, #141B41 100%)' }}
+        ></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 
             className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 text-white"
@@ -183,7 +189,7 @@ export default function IndividualServicesPage() {
           </p>
           <button
             onClick={() => window.location.href = 'https://form.jotform.com/260287243172152'}
-            className="inline-flex items-center justify-center gap-2 bg-white text-[#1A3B5D] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 bg-white text-[#141B41] px-8 py-4 rounded-[30px] font-semibold text-lg hover:bg-gray-100 transition-colors cursor-pointer"
           >
             Book a Call
           </button>
