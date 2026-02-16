@@ -190,14 +190,14 @@ export default function BusinessServicesPage() {
       {/* Who We Work With */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <SectionReveal
-          heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-4">Who We Work With</h2>}
+          heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8 text-center">Who We Work With</h2>}
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-[#141B41]/65 mb-8">
+            <div className="max-w-4xl mx-auto space-y-6">
+            <p className="text-lg text-[#141B41]/65">
               Our business services support companies at every stage-from new entities to complex, multi-entity organizations.
             </p>
-            <p className="text-lg text-[#141B41]/65 mb-6">We commonly work with:</p>
+            <p className="text-lg text-[#141B41]/65">We commonly work with:</p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {businessTypes.map((type, index) => (
                 <div key={index} className="flex items-center gap-3 bg-gray-50 rounded-lg p-4">
@@ -270,12 +270,11 @@ export default function BusinessServicesPage() {
       {/* How It Works */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <SectionReveal
-          heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41]">How It Works</h2>}
+          heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8 text-center">How It Works</h2>}
           contentDelay={0.06}
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-            <div className="space-y-6" style={{ paddingTop: '2rem' }}>
+            <div className="max-w-3xl mx-auto space-y-6">
               {steps.map((step) => (
                 <div key={step.number} className="flex gap-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-[#306BAC] text-white rounded-full flex items-center justify-center font-semibold text-lg">
@@ -293,7 +292,6 @@ export default function BusinessServicesPage() {
               ))}
             </div>
           </div>
-        </div>
         </SectionReveal>
       </section>
 

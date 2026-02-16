@@ -153,12 +153,11 @@ export default function IndividualServicesPage() {
       {/* How It Works */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <SectionReveal
-          heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41]">How It Works</h2>}
+          heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8 text-center">How It Works</h2>}
           contentDelay={0.06}
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-            <div className="space-y-6" style={{ paddingTop: '2rem' }}>
+            <div className="max-w-3xl mx-auto space-y-6">
               {steps.map((step) => (
                 <div key={step.number} className="flex gap-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-[#306BAC] text-white rounded-full flex items-center justify-center font-semibold text-lg">
@@ -176,7 +175,6 @@ export default function IndividualServicesPage() {
               ))}
             </div>
           </div>
-        </div>
         </SectionReveal>
       </section>
 

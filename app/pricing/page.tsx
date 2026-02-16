@@ -80,7 +80,7 @@ export default function PricingPage() {
       </section>
 
       {/* Pricing Cards - horizontal slider, 3 visible */}
-      <section ref={ref} className="py-12 md:py-16 lg:py-20 bg-white">
+      <section ref={ref} className="pt-4 pb-12 md:pt-6 md:pb-16 lg:pt-8 lg:pb-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto relative flex items-center gap-4">
             <button
