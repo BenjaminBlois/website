@@ -69,7 +69,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 text-[#141B41]">
-                Built on Accuracy, Transparency, and trust.
+                Built on Accuracy, Transparency, and Trust.
               </h1>
               <p className="text-lg md:text-xl text-[#141B41]/65">
                 Numeriq was founded to give individuals and businesses clear, reliable financial support-without the confusion, stress, or surprise costs.
@@ -124,7 +124,7 @@ export default function AboutPage() {
       {/* Our Core Principles */}
       <section className="py-12 md:py-16 lg:py-20 bg-white px-4 sm:px-8 lg:px-16">
         <h2
-          className="text-center font-semibold text-[#141B41] mb-12"
+          className="text-center font-semibold text-[#141B41]"
           style={{
             fontSize: 'clamp(1.75rem, 4vw, 3rem)',
             fontWeight: 600,
@@ -134,6 +134,7 @@ export default function AboutPage() {
         >
           Our Core Principles
         </h2>
+        <div style={{ height: '6rem', minHeight: '6rem' }} aria-hidden="true" />
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {principles.map((principle, index) => {
             const cardColors = [

@@ -1,17 +1,17 @@
 'use client';
 
+import { useRef } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+
+const QUOTE_FORM_URL = 'https://form.jotform.com/260287243172152';
 
 interface ServicePricing {
   name: string;
   description: string;
   pricing: string;
-  ctaText: string;
-  ctaHref: string;
 }
 
 const services: ServicePricing[] = [
@@ -19,36 +19,26 @@ const services: ServicePricing[] = [
     name: 'Bookkeeping',
     description: 'Keep your financials organized, up-to-date, and easy to understand.',
     pricing: 'Fixed',
-    ctaText: 'Get Your Quote',
-    ctaHref: 'https://form.jotform.com/260287243172152',
   },
   {
     name: 'Individual & Business Tax Prep',
     description: 'Accurate, compliant tax preparation with clear guidance to minimize stress.',
     pricing: 'Fixed',
-    ctaText: 'Get Your Quote',
-    ctaHref: 'https://form.jotform.com/260287243172152',
   },
   {
     name: 'Fractional CFO Services',
     description: 'Strategic financial oversight, forecasting, and guidance without a full-time CFO cost.',
     pricing: 'Fixed',
-    ctaText: 'Get Your Quote',
-    ctaHref: 'https://form.jotform.com/260287243172152',
   },
   {
     name: 'Financial Analysis & Strategy',
     description: 'Data-driven insights to understand performance and make confident business decisions.',
     pricing: 'Fixed',
-    ctaText: 'Get Your Quote',
-    ctaHref: 'https://form.jotform.com/260287243172152',
   },
   {
     name: 'Entity Setup & Structuring',
     description: 'Guidance on business formation and structure to ensure your company starts off right.',
     pricing: 'Fixed',
-    ctaText: 'Get Your Quote',
-    ctaHref: 'https://form.jotform.com/260287243172152',
   },
 ];
 
@@ -57,13 +47,23 @@ export default function PricingPage() {
     triggerOnce: true,
     threshold: 0.1,
   });
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const scrollPricing = (direction: 'left' | 'right') => {
+    const el = sliderRef.current;
+    if (!el) return;
+    const card = el.querySelector('.pricing-card');
+    const cardWidth = card?.getBoundingClientRect().width ?? 320;
+    const gap = 24;
+    el.scrollBy({ left: (cardWidth + gap) * (direction === 'left' ? -1 : 1), behavior: 'smooth' });
+  };
 
   return (
     <main className="min-h-screen">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative bg-white py-16 md:py-20 lg:py-24">
+      <section className="relative bg-white pt-16 md:pt-20 lg:pt-24 pb-6 md:pb-8 lg:pb-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-[#141B41] mb-4">
             Fixed Pricing. Tailored for You.
@@ -74,41 +74,72 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Pricing Cards */}
+      {/* Pricing Cards - horizontal slider, 3 visible */}
       <section ref={ref} className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.name}
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative bg-white rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col h-full transition-all duration-300 hover:shadow-xl"
-              >
-                <h3 className="text-xl sm:text-2xl font-bold text-[#141B41] mb-3 leading-tight">
-                  {service.name}
-                </h3>
-                <p className="text-sm sm:text-base text-[#141B41]/65 mb-6 leading-relaxed flex-grow">
-                  {service.description}
-                </p>
-                <div className="mb-6">
-                  <span className="inline-block bg-[#306BAC]/10 text-[#306BAC] px-4 py-1.5 rounded-full text-sm font-semibold">
-                    {service.pricing}
-                  </span>
-                </div>
-                <Link
-                  href={service.ctaHref}
-                  className="w-full text-center block px-6 py-3 rounded-lg font-semibold text-white bg-[#306BAC] hover:bg-[#2759A0] transition-all duration-300 shadow-md hover:shadow-lg no-underline"
+          <div className="max-w-6xl mx-auto relative flex items-center gap-4">
+            <button
+              type="button"
+              onClick={() => scrollPricing('left')}
+              className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md border border-gray-200 flex items-center justify-center text-[#306BAC] hover:bg-[#306BAC] hover:text-white transition-colors cursor-pointer"
+              aria-label="Scroll left"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <div
+              ref={sliderRef}
+              className="flex gap-6 overflow-x-auto overflow-y-hidden py-2 scroll-smooth min-h-[280px] flex-1 max-w-[calc(300px*3+24*2)]"
+              style={{ scrollbarWidth: 'thin' }}
+            >
+              {services.map((service, index) => (
+                <motion.div
+                  key={service.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                  transition={{ duration: 0.6, delay: index * 0.05 }}
+                  className="pricing-card flex-shrink-0 w-[calc(100%-2rem)] sm:w-[280px] md:w-[300px] bg-white rounded-[20px] border border-gray-200 shadow-md p-6 flex flex-col h-full transition-all duration-300 hover:shadow-xl"
                 >
-                  {service.ctaText}
-                </Link>
-              </motion.div>
-            ))}
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#141B41] mb-3 leading-tight">
+                    {service.name}
+                  </h3>
+                  <p className="text-sm sm:text-base text-[#141B41]/65 mb-6 leading-relaxed flex-grow">
+                    {service.description}
+                  </p>
+                  <div>
+                    <span className="inline-block bg-[#306BAC]/10 text-[#306BAC] px-4 py-1.5 rounded-full text-sm font-semibold">
+                      {service.pricing}
+                    </span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={() => scrollPricing('right')}
+              className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md border border-gray-200 flex items-center justify-center text-[#306BAC] hover:bg-[#306BAC] hover:text-white transition-colors cursor-pointer"
+              aria-label="Scroll right"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          <div className="max-w-6xl mx-auto mt-10 text-center">
+            <a
+              href={QUOTE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-white bg-[#306BAC] hover:bg-[#2759A0] transition-all duration-300 shadow-md hover:shadow-lg no-underline"
+            >
+              Get Your Quote
+            </a>
           </div>
 
           {/* Bottom text */}
-          <p className="text-center text-[#141B41]/65 mt-12 text-lg max-w-2xl mx-auto">
+          <p className="text-center text-[#141B41]/65 mt-10 text-lg max-w-2xl mx-auto">
             With Numeriq, fixed pricing means transparency, predictability, and peace of mind. You'll always know what you're paying for and why.
           </p>
         </div>
