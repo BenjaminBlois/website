@@ -56,7 +56,7 @@ export default function ServicesPreview() {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-[#F5F7FA]">
+    <section className="py-12 md:py-16 lg:py-20" style={{ background: 'linear-gradient(135deg, #E3EAF8 0%, #D5DEFA 50%, #E8EDFC 100%)' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
