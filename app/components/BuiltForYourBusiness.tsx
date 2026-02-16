@@ -110,6 +110,7 @@ function ServiceCardComponent({ service, index }: { service: ServiceCard; index:
               letterSpacing: '-0.02em',
               lineHeight: '1.2',
               fontWeight: 600,
+              textShadow: '0 2px 8px rgba(0,0,0,0.15)',
             }}
           >
             {service.title}
@@ -119,6 +120,7 @@ function ServiceCardComponent({ service, index }: { service: ServiceCard; index:
             style={{
               lineHeight: '1.6',
               opacity: 0.95,
+              textShadow: '0 1px 4px rgba(0,0,0,0.1)',
             }}
           >
             {service.description}
