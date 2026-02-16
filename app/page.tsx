@@ -16,7 +16,17 @@ export default function Home() {
       <BuiltForYourBusiness />
 
       {/* Shared ambient layer — radial orbs + grain bleed across sections */}
-      <div className="relative">
+      <div className="relative" style={{ borderRadius: '48px 48px 0 0', overflow: 'hidden' }}>
+        {/* Soft blurred edge at the top */}
+        <div
+          className="absolute top-0 left-0 right-0 h-24 pointer-events-none z-10"
+          style={{
+            background: 'linear-gradient(to bottom, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%)',
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+            borderRadius: '48px 48px 0 0',
+          }}
+        />
         {/* Radial color orbs that span and bleed across sections */}
         <div
           className="absolute inset-0 pointer-events-none"
