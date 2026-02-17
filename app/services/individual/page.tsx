@@ -155,10 +155,10 @@ export default function IndividualServicesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <SectionReveal
-              heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8">How It Works</h2>}
+              heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41]">How It Works</h2>}
               contentDelay={0.06}
             >
-              <div className="space-y-6">
+              <div className="space-y-6" style={{ paddingTop: '2rem' }}>
                 {steps.map((step) => (
                   <div key={step.number} className="flex gap-4">
                     <div className="flex-shrink-0 w-10 h-10 bg-[#306BAC] text-white rounded-full flex items-center justify-center font-semibold text-lg">
