@@ -189,28 +189,28 @@ export default function BusinessServicesPage() {
 
       {/* Who We Work With */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
-        <SectionReveal
-          heading={<div className="container mx-auto px-4 sm:px-6 lg:px-8"><h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8 text-center">Who We Work With</h2></div>}
-        >
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto space-y-6">
-            <p className="text-lg text-[#141B41]/65">
-              Our business services support companies at every stage-from new entities to complex, multi-entity organizations.
-            </p>
-            <p className="text-lg text-[#141B41]/65">We commonly work with:</p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {businessTypes.map((type, index) => (
-                <div key={index} className="flex items-center gap-3 bg-gray-50 rounded-lg p-4">
-                  <div className="w-10 h-10 bg-[#306BAC] text-white rounded-full flex items-center justify-center flex-shrink-0">
-                    {renderIcon(type.icon)}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <SectionReveal
+              heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-4">Who We Work With</h2>}
+            >
+              <p className="text-lg text-[#141B41]/65 mb-8">
+                Our business services support companies at every stage-from new entities to complex, multi-entity organizations.
+              </p>
+              <p className="text-lg text-[#141B41]/65 mb-6">We commonly work with:</p>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {businessTypes.map((type, index) => (
+                  <div key={index} className="flex items-center gap-3 bg-gray-50 rounded-lg p-4">
+                    <div className="w-10 h-10 bg-[#306BAC] text-white rounded-full flex items-center justify-center flex-shrink-0">
+                      {renderIcon(type.icon)}
+                    </div>
+                    <span className="text-sm md:text-base text-[#141B41] font-medium">{type.name}</span>
                   </div>
-                  <span className="text-sm md:text-base text-[#141B41] font-medium">{type.name}</span>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </SectionReveal>
           </div>
         </div>
-        </SectionReveal>
       </section>
 
       {/* Our Business Services */}
@@ -218,81 +218,83 @@ export default function BusinessServicesPage() {
         className="py-12 md:py-16 lg:py-20"
         style={{ background: 'radial-gradient(circle 600px at 80% 30%, rgba(48,107,172,0.12) 0%, transparent 55%), radial-gradient(circle 500px at 20% 70%, rgba(152,185,242,0.15) 0%, transparent 55%), #F0F3FC' }}
       >
-        <SectionReveal
-          heading={<div className="container mx-auto px-4 sm:px-6 lg:px-8"><h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-16 text-center">Our Business Services</h2></div>}
-          contentDelay={0.08}
-        >
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionReveal
+            heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8 text-center">Our Business Services</h2>}
+            contentDelay={0.08}
+          >
             <div className="max-w-6xl mx-auto relative flex items-center gap-4">
-            <button
-              type="button"
-              onClick={() => scrollServices('left')}
-              className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-[#306BAC] hover:bg-[#306BAC] hover:text-white transition-colors cursor-pointer"
-              aria-label="Scroll left"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <div
-              ref={servicesScrollRef}
-              className="flex gap-6 overflow-x-auto overflow-y-hidden py-2 scroll-smooth min-h-[200px] flex-1 max-w-[calc(300px*3+24*2)]"
-              style={{ scrollbarWidth: 'thin' }}
-            >
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="service-card flex-shrink-0 w-[calc(100%-2rem)] sm:w-[280px] md:w-[300px] bg-white rounded-xl p-6 shadow-sm"
-                >
-                  <div className="w-14 h-14 bg-[#306BAC] text-white rounded-full flex items-center justify-center mb-4">
-                    {renderIcon(service.icon)}
+              <button
+                type="button"
+                onClick={() => scrollServices('left')}
+                className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-[#306BAC] hover:bg-[#306BAC] hover:text-white transition-colors cursor-pointer"
+                aria-label="Scroll left"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <div
+                ref={servicesScrollRef}
+                className="flex gap-6 overflow-x-auto overflow-y-hidden py-2 scroll-smooth min-h-[200px] flex-1 max-w-[calc(300px*3+24*2)]"
+                style={{ scrollbarWidth: 'thin' }}
+              >
+                {services.map((service, index) => (
+                  <div
+                    key={index}
+                    className="service-card flex-shrink-0 w-[calc(100%-2rem)] sm:w-[280px] md:w-[300px] bg-white rounded-xl p-6 shadow-sm"
+                  >
+                    <div className="w-14 h-14 bg-[#306BAC] text-white rounded-full flex items-center justify-center mb-4">
+                      {renderIcon(service.icon)}
+                    </div>
+                    <h3 className="text-xl font-semibold text-[#141B41] mb-3">{service.title}</h3>
+                    <p className="text-[#141B41]/65 text-sm md:text-base">{service.description}</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-[#141B41] mb-3">{service.title}</h3>
-                  <p className="text-[#141B41]/65 text-sm md:text-base">{service.description}</p>
-                </div>
-              ))}
+                ))}
+              </div>
+              <button
+                type="button"
+                onClick={() => scrollServices('right')}
+                className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-[#306BAC] hover:bg-[#306BAC] hover:text-white transition-colors cursor-pointer"
+                aria-label="Scroll right"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
-            <button
-              type="button"
-              onClick={() => scrollServices('right')}
-              className="flex-shrink-0 w-12 h-12 rounded-full bg-white shadow-md border border-gray-100 flex items-center justify-center text-[#306BAC] hover:bg-[#306BAC] hover:text-white transition-colors cursor-pointer"
-              aria-label="Scroll right"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-            </div>
-          </div>
-        </SectionReveal>
+          </SectionReveal>
+        </div>
       </section>
 
       {/* How It Works */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
-        <SectionReveal
-          heading={<div className="container mx-auto px-4 sm:px-6 lg:px-8"><h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8 text-center">How It Works</h2></div>}
-          contentDelay={0.06}
-        >
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto space-y-6">
-              {steps.map((step) => (
-                <div key={step.number} className="flex gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-[#306BAC] text-white rounded-full flex items-center justify-center font-semibold text-lg">
-                    {step.number}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <SectionReveal
+              heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8">How It Works</h2>}
+              contentDelay={0.06}
+            >
+              <div className="space-y-6">
+                {steps.map((step) => (
+                  <div key={step.number} className="flex gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-[#306BAC] text-white rounded-full flex items-center justify-center font-semibold text-lg">
+                      {step.number}
+                    </div>
+                    <div>
+                      <h3 className="text-lg md:text-xl font-semibold text-[#141B41] mb-1">
+                        {step.title}
+                      </h3>
+                      <p className="text-[#141B41]/65">
+                        {step.description}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg md:text-xl font-semibold text-[#141B41] mb-1">
-                      {step.title}
-                    </h3>
-                    <p className="text-[#141B41]/65">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </SectionReveal>
           </div>
-        </SectionReveal>
+        </div>
       </section>
 
       {/* CTA + Footer gradient wrapper */}
