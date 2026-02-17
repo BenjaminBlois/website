@@ -74,7 +74,7 @@ export default function IndividualServicesPage() {
       {/* Who We Help */}
       <section className="pt-12 md:pt-16 lg:pt-20 pb-20 md:pb-24 lg:pb-28 bg-white">
         <SectionReveal
-          heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">Who We Help</h2>}
+          heading={<div className="container mx-auto px-4 sm:px-6 lg:px-8"><h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-6">Who We Help</h2></div>}
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
@@ -115,7 +115,7 @@ export default function IndividualServicesPage() {
         style={{ background: 'radial-gradient(circle 600px at 80% 30%, rgba(48,107,172,0.12) 0%, transparent 55%), radial-gradient(circle 500px at 20% 70%, rgba(152,185,242,0.15) 0%, transparent 55%), #F0F3FC' }}
       >
         <SectionReveal
-          heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-16 text-center">Our Services</h2>}
+          heading={<div className="container mx-auto px-4 sm:px-6 lg:px-8"><h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-16 text-center">Our Services</h2></div>}
           contentDelay={0.08}
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -153,7 +153,7 @@ export default function IndividualServicesPage() {
       {/* How It Works */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <SectionReveal
-          heading={<h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8 text-center">How It Works</h2>}
+          heading={<div className="container mx-auto px-4 sm:px-6 lg:px-8"><h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#141B41] mb-8 text-center">How It Works</h2></div>}
           contentDelay={0.06}
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
